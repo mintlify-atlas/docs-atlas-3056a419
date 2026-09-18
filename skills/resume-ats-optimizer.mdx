@@ -1,0 +1,145 @@
+---
+title: "ATS Resume Optimizer: Beat Applicant Tracking Systems"
+sidebarTitle: "ATS Optimizer"
+description: "The resume-ats-optimizer skill checks ATS compatibility, analyzes keyword match against job postings, fixes formatting issues, and scores your resume before submission."
+---
+
+75% of resumes are rejected by Applicant Tracking Systems before a single human ever reads them. Companies use ATS software to automatically filter, parse, and rank candidates — and most resumes fail not because of weak experience, but because of invisible formatting errors and missing keywords. The `resume-ats-optimizer` skill performs a full ATS compatibility audit: it scans your resume's structure, extracts required keywords from the job description, scores your current match rate, and delivers precise recommendations to fix every issue standing between your application and a recruiter's inbox.
+
+## What This Skill Does
+
+The ATS optimizer covers every dimension of automated screening, giving you a complete picture before you submit:
+
+- **ATS compatibility scan** — detects structural problems that prevent ATS systems from parsing your resume correctly
+- **Keyword match analysis** — compares your resume's language against the specific job description you're targeting
+- **Formatting issue detection** — flags tables, multi-column layouts, graphics, non-standard fonts, and header/footer traps
+- **Keyword gap identification** — lists every required and preferred keyword missing from your resume, ranked by frequency in the job posting
+- **Section header standardization** — replaces creative section names with ATS-recognized equivalents
+- **File format recommendations** — advises on `.docx` vs. PDF submission based on the application method
+- **Match score calculation** — quantifies your keyword coverage so you know exactly where you stand before applying
+
+## Trigger Phrases
+
+Use any of the following prompts to activate this skill. Paste your resume and optionally the job description in the same message for the most complete analysis:
+
+```text
+"Optimize my resume for ATS"
+"Check my resume for ATS compatibility"
+"Is my resume ATS-friendly?"
+"Analyze keyword match for this job" + paste JD
+"What keywords am I missing from this posting?"
+"Why isn't my resume getting responses?"
+"Score my resume against this job description"
+```
+
+## Optimization Workflow
+
+<Steps>
+  <Step title="ATS Compatibility Scan">
+    The skill audits your resume for structural and formatting issues that break ATS parsers. It checks for tables used as layout tools, text boxes, multi-column designs, graphics and images, contact information placed in headers or footers (where most ATS systems cannot read it), inconsistent bullet symbols, non-standard fonts, and file format. Each issue is flagged with a pass/fail indicator and a specific fix.
+  </Step>
+  <Step title="Keyword Extraction from Job Description">
+    The skill reads the provided job description and categorizes every keyword into three tiers: **critical hard skills** (tools, technologies, certifications, methodologies explicitly required), **important soft skills** (leadership, collaboration, communication patterns used in the posting), and **industry terminology** (sector-specific vocabulary like ARR, SaaS, HIPAA, or Agile that signals cultural fit). Frequency of each keyword in the JD is noted — terms that appear 3+ times are flagged as high-priority.
+  </Step>
+  <Step title="Gap Analysis">
+    Your resume's current keyword coverage is mapped against the extracted list. Each keyword is checked for exact match, close synonym, or absence. The skill calculates your current match score using the formula `(Keywords Matched ÷ Total Required Keywords) × 100`. Industry benchmark: **80%+ is a strong match**; below 60% typically means your application will be filtered out automatically.
+  </Step>
+  <Step title="Formatting Fixes">
+    Every detected formatting violation receives a concrete fix. Tables get converted to simple text layouts, graphics are removed, contact information is moved from headers into the resume body, section headers are renamed to ATS-recognized standards, and date formats are standardized throughout. The skill shows the before and after for each change.
+  </Step>
+  <Step title="Keyword Integration Suggestions">
+    For each missing keyword, the skill identifies the best placement on your resume — Professional Summary, Skills section, or an existing Experience bullet — and drafts the exact revised text. Keywords are integrated naturally so the resume reads well to humans too. It avoids keyword stuffing by respecting density guidelines: critical terms should appear 2–4 times, important terms 1–2 times.
+  </Step>
+  <Step title="Final ATS Score">
+    After all recommended changes are applied, the skill re-calculates your match score and produces a final ATS Compatibility Report showing: overall score, formatting issues resolved, keywords added, remaining gaps (if any), and a submission-ready checklist confirming the resume is ready to go.
+  </Step>
+</Steps>
+
+## ATS Formatting Rules
+
+ATS systems parse plain text. Any design element that creates a visual layout but isn't plain prose is a potential parsing failure. Follow these rules to ensure your resume survives automated screening:
+
+- **No tables for layout** — tables are often skipped entirely or parsed as garbled text; use plain line breaks and whitespace instead
+- **No headers or footers** — information placed in document headers/footers (including your name and contact details) is invisible to most ATS parsers; put everything in the body
+- **Standard section names only** — use `Work Experience` or `Professional Experience` (not `My Journey`), `Education` (not `Academic Background`), `Skills` (not `Core Competencies`)
+- **No graphics, icons, or images** — skill bars, profile photos, logo icons, and infographic elements cannot be parsed and cause the sections around them to be misread
+- **Standard fonts throughout** — Arial, Calibri, Georgia, or Times New Roman; decorative or custom fonts may render as symbols in some parsers
+- **Simple bullet points** — use `•`, `-`, or `*`; avoid wingdings, arrows, or emoji
+- **Consistent date formats** — pick one format (`Jan 2022` or `01/2022`) and use it everywhere; inconsistency confuses date-parsing algorithms
+- **Submit as `.docx` or text-based PDF** — never submit a scanned image PDF; `.pages` and `.odt` formats are widely unsupported
+
+## ATS Score Reference
+
+| Match Score | Likely Outcome |
+|---|---|
+| 85–100% | Strong match — high chance of passing automated screening |
+| 70–84% | Decent match — may pass, but worth improving before submitting |
+| 55–69% | Borderline — likely filtered unless other signals are strong |
+| Below 55% | High risk of automatic rejection — significant optimization needed |
+
+## Example ATS Report Output
+
+After running the skill, you'll receive a structured report like this:
+
+```markdown
+# ATS COMPATIBILITY REPORT
+
+## Overall Score: 68/100 → Estimated Post-Fix Score: 87/100
+
+### Formatting Issues Found
+❌ Contact info in document header — move to body
+❌ Two-column layout detected — convert to single column
+⚠️  Mixed date formats (e.g., "2021" vs "Jan 2021") — standardize
+
+### Keyword Gap Analysis
+
+Critical Keywords (HIGH PRIORITY):
+✅ Project Management    — found 3x
+✅ Agile/Scrum           — found 2x
+❌ Stakeholder Management — MISSING (appears 5x in JD)
+❌ Budget Management     — MISSING (appears 3x in JD)
+
+Important Keywords:
+⚠️  "risk mitigation" found — JD uses "risk management" (exact match needed)
+✅ Cross-functional teams — found 1x
+
+### Recommended Keyword Additions
+
+In Professional Summary, add:
+"...with deep expertise in stakeholder management and cross-functional budget oversight..."
+
+In Experience bullets, add:
+"Directed budget management for $X portfolio across Y teams"
+"Coordinated stakeholder management touchpoints with C-suite and external vendors"
+```
+
+<Tip>
+  Run this skill for every job application — keyword requirements vary significantly from posting to posting, even for the same job title at different companies. A resume optimized for one role may score 55% on another.
+</Tip>
+
+## Industry-Specific Considerations
+
+Different industries weight different keyword types. The skill applies tailored extraction logic based on the role:
+
+<CardGroup cols={2}>
+  <Card title="Tech Roles" icon="code">
+    Prioritizes programming languages, frameworks, cloud platforms (AWS, GCP, Azure), and certifications. Checks that GitHub and portfolio links appear in the Skills section body — not in headers — so they're parsed correctly.
+  </Card>
+  <Card title="Business & Finance" icon="chart-line">
+    Focuses on software proficiency (Excel, SAP, Salesforce, Bloomberg), professional certifications (CPA, CFA, PMP), and financial vocabulary (P&L, ROI, KPI, EBITDA).
+  </Card>
+  <Card title="Healthcare" icon="heart-pulse">
+    Validates presence of required licenses, specific EHR systems (Epic, Cerner, MEDITECH), and compliance terminology (HIPAA, Joint Commission, ICD-10).
+  </Card>
+  <Card title="Marketing" icon="megaphone">
+    Extracts platform expertise (HubSpot, Salesforce Marketing Cloud, Google Analytics), channel keywords (SEO, PPC, email marketing), and performance metrics language (CAC, LTV, conversion rate).
+  </Card>
+</CardGroup>
+
+## Special Scenarios
+
+**Career changers:** The skill flags your current industry's vocabulary and suggests substitutions with target-industry equivalents. You may need two resume versions with different keyword profiles.
+
+**Recent graduates:** ATS still matters for entry-level roles. The skill will look for relevant coursework, projects, and internships as keyword sources when paid experience is limited.
+
+**Employment gaps:** The skill recommends using year-only date formats when appropriate and surfaces any freelance, consulting, or volunteer work that could contribute relevant keywords.

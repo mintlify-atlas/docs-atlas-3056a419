@@ -1,0 +1,232 @@
+---
+title: "Tech Resume Optimizer: Engineering, PM, and Technical Role Resumes"
+sidebarTitle: "Tech Resume"
+description: "Optimize resumes for software engineering, product management, data science, and other technical roles with tech-specific formatting, skills sections, and project highlights."
+---
+
+Technical resumes have unique requirements — skills sections matter more, GitHub and portfolio links are expected, and interviewers scan for specific technologies and scale indicators. A strong technical resume isn't just a chronological work history; it's a proof-of-competence document that communicates what you built, at what scale, with which tools, and what business or engineering outcome resulted. The `tech-resume-optimizer` skill handles all of it: it restructures your skills section into recruiter-readable categories, rewrites experience bullets to include the technology stack and scale metrics that technical interviewers look for, and surfaces the GitHub and project signals that set technical candidates apart.
+
+## Tech Role Categories
+
+Different technical roles require different resume emphasis. The skill adapts its optimization strategy based on which category fits your target position:
+
+<CardGroup cols={2}>
+  <Card title="Software Engineering (SWE)" icon="code">
+    Emphasizes system design, scale metrics (DAU, requests/sec, data volume), technical depth per role, and open source or personal projects. GitHub is expected. Stack per job is required.
+  </Card>
+  <Card title="Product Management (PM)" icon="chart-bar">
+    Leads with business outcomes and OKRs rather than technical implementation. Cross-functional influence, ship history, and product metrics (conversion, retention, MAU) take priority over code proficiency.
+  </Card>
+  <Card title="Data Science / ML" icon="brain">
+    Balances statistical methodology with business impact. Model performance metrics (accuracy, AUC, lift) pair with downstream revenue or efficiency outcomes. Kaggle rankings and research publications signal credibility.
+  </Card>
+  <Card title="DevOps / SRE" icon="server">
+    Prioritizes reliability metrics (uptime SLA, MTTR, MTBF), infrastructure at scale, and automation wins. Cost reduction through infrastructure changes is a particularly strong signal.
+  </Card>
+  <Card title="Engineering Management" icon="users">
+    Highlights team size, organizational growth, cross-functional coordination, and engineering culture investments. Technical depth is still expected — "former IC" credibility must be visible.
+  </Card>
+  <Card title="Technical Program Management (TPM)" icon="diagram-project">
+    Showcases cross-team dependency management, delivery track record, program scope (teams, budget, timelines), and structured risk management. Combines PM narrative rigor with engineering vocabulary.
+  </Card>
+</CardGroup>
+
+## Tech-Specific Resume Components
+
+Beyond the standard resume structure, technical roles require several components that general-purpose resume advice ignores.
+
+### Skills Section Structure
+
+Technical skills sections should follow a hierarchical format that lets recruiters and ATS systems parse your stack at a glance. The recommended order is:
+
+```text
+Languages > Frameworks > Tools > Platforms
+```
+
+**Example:**
+```text
+Languages:   Python, JavaScript, TypeScript, Go, SQL
+Frameworks:  Django, FastAPI, React, Node.js, Pandas, PyTorch
+Tools:       Docker, Kubernetes, Terraform, GitHub Actions, Datadog
+Platforms:   AWS (EC2, S3, Lambda, RDS), GCP (BigQuery, GKE), Snowflake
+```
+
+This structure gives you ATS coverage for flat keyword parsing while remaining readable to technical reviewers who want to understand your actual stack depth. Group by category rather than proficiency level — proficiency ratings (e.g., "beginner / intermediate / expert") are subjective, ATS-invisible, and waste space.
+
+### GitHub and Portfolio Links in the Header
+
+Your contact header should include technical profile links directly beneath your name and email — not buried in a footer or skills section. ATS parsers can read them from the body; recruiters need to find them instantly.
+
+```text
+Jane Engineer  |  Seattle, WA  |  jane@email.com  |  (555) 234-5678
+github.com/janeengineer  |  janeengineer.dev  |  linkedin.com/in/janeengineer
+```
+
+A tech blog or published writing on platforms like Medium or Substack signals communication skills — include it if it's active and technical.
+
+### Projects Section
+
+A dedicated Projects section is not just for junior engineers — it's where you showcase technical curiosity, open source contributions, and personal depth that rarely fits in an employment history. Use this format:
+
+```text
+Project Name  |  Stack  |  Link
+
+- What the project does (one sentence)
+- Technical challenge or interesting design decision
+- Scale or usage metric if available (stars, users, downloads)
+```
+
+Open source contributions carry extra weight: include any repos where you are a named contributor, any PRs merged to major projects, and any libraries you maintain.
+
+### Scale Indicators in Experience Bullets
+
+Technical interviewers look for numbers that prove you've operated at real scale. Every high-impact bullet should include at least one of the following:
+
+| Metric Type | Example Format |
+|---|---|
+| User scale | "serving 12M monthly active users" |
+| Request throughput | "handling 80K requests/second at peak" |
+| Data volume | "processing 4TB of event data daily" |
+| Latency improvement | "reduced p99 latency from 850ms to 40ms" |
+| Cost reduction | "cut AWS spend by $340K/year (42%)" |
+| Uptime / reliability | "maintaining 99.97% availability across 3 AZs" |
+| Team scale | "led 8-engineer team across 2 time zones" |
+
+## SWE vs PM Resume Differences
+
+The structure and emphasis of a software engineering resume and a product management resume diverge significantly, even when the role sits on the same team.
+
+<Tabs>
+  <Tab title="Software Engineering (SWE)">
+    **Lead with engineering impact, not process.**
+
+    - **Open with metrics**: every bullet should quantify the system you built and its effect on scale, latency, reliability, or cost
+    - **Show the tech stack per role**: list the specific languages, frameworks, and infrastructure you used at each job — not just in a global skills section
+    - **Include GitHub**: SWE candidates without a GitHub link are at a meaningful disadvantage, especially at mid-size and startup companies
+    - **Emphasize system design signals**: words like "architected," "designed," "migrated," and "refactored" tell interviewers you can think beyond feature delivery
+    - **Projects section is valuable at all levels**: even senior engineers benefit from showing what they build outside work hours
+
+    **Example SWE bullet:**
+    ```text
+    Redesigned the authentication service to support OAuth 2.0 and PKCE using
+    Go and Redis, replacing a legacy session model and reducing login latency
+    by 70% for 8M active users while eliminating a class of session fixation
+    vulnerabilities.
+    ```
+  </Tab>
+  <Tab title="Product Management (PM)">
+    **Lead with business outcomes, not implementation details.**
+
+    - **Lead with OKRs**: PMs are evaluated on product decisions and outcomes — surface revenue impact, retention change, adoption rates, and NPS movements
+    - **Show cross-functional influence**: PM resumes should name the engineering, design, data science, and go-to-market partners you collaborated with
+    - **Emphasize strategic decisions**: include the tradeoffs you made, the hypotheses you validated, and the roadmap priorities you owned
+    - **Ship history matters**: hiring managers want to see a consistent record of launched products — include ship dates or release cycle cadence
+    - **Technical credibility**: demonstrate just enough technical fluency to show you can drive engineering conversations; mention data tools (SQL, Amplitude, Looker) and system-level involvement without over-indexing
+
+    **Example PM bullet:**
+    ```text
+    Defined and shipped a self-serve onboarding flow for SMB customers,
+    reducing time-to-value from 14 days to 3 days and improving 30-day
+    retention by 22%, contributing $4.2M in incremental ARR in Q1.
+    ```
+  </Tab>
+</Tabs>
+
+## Tech Bullet Formula
+
+The single most impactful change you can make to a technical resume is rewriting weak, task-focused bullets into achievement-focused statements that communicate *what you built*, *how you built it*, and *why it mattered*.
+
+**Formula:**
+```text
+[Action verb] [what you built] using [tech stack] that [measurable impact]
+```
+
+**Example — Distributed Systems:**
+```text
+Built distributed caching layer using Redis and Lua scripting that reduced API
+p99 latency from 800ms to 45ms, supporting 50M daily requests with zero cache
+stampede incidents during traffic spikes.
+```
+
+**Example — Data Pipeline:**
+```text
+Engineered real-time ingestion pipeline using Apache Kafka and Spark Streaming
+that replaced a nightly batch job, cutting data freshness from 12 hours to
+under 90 seconds for downstream analytics serving 200+ business users.
+```
+
+**Example — Infrastructure:**
+```text
+Migrated 40-service monorepo to independent Kubernetes deployments using
+Terraform and Helm, reducing release cycle from bi-weekly to on-demand and
+cutting mean deployment time from 45 minutes to 6 minutes.
+```
+
+**Example — ML / Data Science:**
+```text
+Trained and deployed a gradient boosted churn prediction model using
+XGBoost and Vertex AI that identified at-risk customers 30 days in advance,
+enabling targeted retention campaigns that recovered $1.8M in annual ARR.
+```
+
+### Action Verbs by Role
+
+<CardGroup cols={3}>
+  <Card title="SWE Verbs" icon="hammer">
+    Architected, Built, Designed, Engineered, Implemented, Migrated, Refactored, Optimized, Deployed, Containerized
+  </Card>
+  <Card title="PM Verbs" icon="lightbulb">
+    Defined, Launched, Shipped, Prioritized, Drove, Championed, Aligned, Validated, Owned, Grew
+  </Card>
+  <Card title="Data / ML Verbs" icon="chart-mixed">
+    Trained, Modeled, Analyzed, Surfaced, Productionized, Instrumented, Evaluated, Automated, Forecasted, Visualized
+  </Card>
+</CardGroup>
+
+## Optimization Workflow
+
+<Steps>
+  <Step title="Identify Target Role and Stack">
+    The skill starts by asking for your target role (SWE, PM, Data, DevOps, EM, TPM) and the specific tech stack or tool requirements from any job descriptions you're targeting. This shapes everything downstream — keyword prioritization, bullet emphasis, and skills section order.
+  </Step>
+  <Step title="Restructure the Skills Section">
+    The skill reorganizes your technical skills into the Languages > Frameworks > Tools > Platforms hierarchy. It removes outdated technologies, flags anything you listed but can't be interviewed on, and ensures ATS coverage for every keyword appearing in your target job descriptions.
+  </Step>
+  <Step title="Rewrite Experience Bullets">
+    Every bullet is reviewed against the tech bullet formula. Weak bullets that describe responsibilities without outcomes are rewritten with the metric and stack context filled in. The skill will ask clarifying questions when key data is missing (e.g., "How many users did this system serve?" or "What was the before/after latency?").
+  </Step>
+  <Step title="Audit GitHub and Portfolio Links">
+    The skill checks that GitHub and portfolio URLs are present in the header, are correctly formatted for ATS parsing, and directs attention to GitHub profile best practices: pinned repositories, active contribution history, and project READMEs that include tech stack, setup instructions, and outcomes.
+  </Step>
+  <Step title="Add or Expand the Projects Section">
+    For each project (personal, open source, or side work), the skill formats it consistently with name, tech stack, link, and 2–3 bullets covering what it does, a technical challenge solved, and a scale or impact metric if available.
+  </Step>
+  <Step title="Final Technical ATS Check">
+    The skill runs a final check against ATS formatting rules and keyword coverage, ensuring the revised resume passes automated screening and reads well to a technical recruiter in a 30-second scan.
+  </Step>
+</Steps>
+
+## Trigger Phrases
+
+```text
+"Optimize my resume for a senior software engineer role"
+"Rewrite my tech resume for a PM position"
+"Make my resume better for data science jobs"
+"Help me write my engineering resume with metrics"
+"Review my tech resume for an SRE role"
+"Format my skills section for a backend engineer position"
+"Add scale indicators to my resume bullets"
+"Write project bullets for my GitHub projects"
+```
+
+## Best Practices
+
+<Tip>
+  List only technologies you're comfortable being interviewed on. Interviewers treat the skills section as fair game for deep technical questions — if you list Kubernetes, expect a question about pod scheduling or resource limits. Don't pad your skills list with tools you touched once in a tutorial. If you're learning something and want to include it, add `(learning)` next to it, or save it for your cover letter.
+</Tip>
+
+- **One tech stack is better than two vague ones.** Depth in a primary stack matters more than breadth across five.
+- **Don't omit the "why."** Mentioning Redis is less compelling than "implemented Redis pub/sub to decouple event processing, reducing API response time by 55%."
+- **Recency signals seniority.** Put your most sophisticated technical work at the top of each role, even if it wasn't the largest project by scope.
+- **Tailor the skills section per application.** The order in which you list languages and tools should reflect the stack mentioned in the job description.
+- **Don't list soft skills in a tech resume.** "Team player," "self-starter," and "detail-oriented" consume space better used for another technical achievement.

@@ -1,0 +1,249 @@
+---
+title: "Academic CV Builder: Publications, Grants, and Teaching Experience"
+sidebarTitle: "Academic CV"
+description: "Format academic CVs for faculty, postdoc, and research positions with proper citation formatting, publication lists, grant history, teaching portfolios, and service records."
+---
+
+Academic CVs are fundamentally different from industry resumes — they are comprehensive records of scholarly output and can run 10+ pages for mid-career faculty and 20–30+ pages for senior scholars. The goal is not conciseness but completeness: every publication, every grant, every course taught, every committee served on belongs in the record. The `academic-cv-builder` skill formats your CV to academic standards with proper citation styles, correct section ordering for your discipline and target position type, and the institutional formatting conventions that search committees use to evaluate scholarly trajectory. Whether you're building your first postdoc application or updating a full professor CV, the skill ensures nothing is missing and everything is properly attributed.
+
+## Academic CV vs Industry Resume
+
+The philosophical difference between an academic CV and an industry resume is as significant as the formatting difference. Understanding this distinction prevents the most common mistake candidates make when crossing between the two worlds.
+
+| | Academic CV | Industry Resume |
+|---|---|---|
+| Length | Comprehensive (5–30+ pages) | Concise (1–2 pages) |
+| Publications | Full section with complete citations | Brief mention or omit |
+| Teaching | Dedicated section with course details | Minor mention or omit |
+| Grants | Full section with amounts and your role | Omit or brief |
+| Presentations | Separate section, categorized | Omit or fold into experience |
+| Service | Dedicated section | Omit |
+| Format | Comprehensive record of all scholarly activity | Highlights and achievements only |
+| Purpose | Prove scholarly productivity and trajectory | Demonstrate fit and transferable value |
+| Audience | Faculty search committees, grant panels | Recruiters, hiring managers |
+| Currency | Updated continuously throughout career | Tailored per application |
+
+An industry resume is an argument for fit. An academic CV is a record of scholarship. When academics transition to industry, the CV must be translated into a resume — not submitted as-is.
+
+## Standard CV Section Order
+
+The ordering below reflects the standard for research-focused positions (tenure-track faculty, postdoctoral fellowships, research scientist roles). Teaching-focused positions should move Teaching Experience higher — typically above Publications. Administrative and leadership positions should elevate Service.
+
+<Steps>
+  <Step title="Education">
+    All degrees in reverse chronological order with degree type, field, institution, year awarded, dissertation/thesis title, and advisor name. Include committee members for PhD. Note honors (summa cum laude, phi beta kappa). Never omit your PhD advisor — search committees universally look for this.
+  </Step>
+  <Step title="Academic Appointments and Research Positions">
+    Current and previous positions in reverse chronological order. Include institution, department, title, and dates. Postdoctoral fellowships should name the PI and lab. Visiting or adjunct positions belong here, not in teaching.
+  </Step>
+  <Step title="Publications">
+    The most scrutinized section for research positions. List all peer-reviewed work in the citation format standard to your discipline. Bold your name in all author lists. Separate by type: journal articles, book chapters, books, conference proceedings, working papers. Number the list — total publication count is frequently cited in committee discussions.
+  </Step>
+  <Step title="Presentations">
+    Categorize as invited talks (highest prestige), conference presentations, campus talks, and public or community lectures. Invited keynotes should appear at the top. Include location and date for every entry.
+  </Step>
+  <Step title="Grants and Fellowships">
+    List awarded funding first (with amounts, your role, and dates), then pending submissions (with submission date), and optionally unfunded submissions in fields where this is conventional. Search committees evaluate the trajectory of your funding activity, not just current grants.
+  </Step>
+  <Step title="Teaching Experience">
+    For each course: course number and title, your role (Instructor of Record vs. Teaching Assistant), institution, semesters taught, and enrollment. Flag courses you developed or substantially redesigned. Strong teaching evaluations can be summarized here.
+  </Step>
+  <Step title="Mentorship">
+    List graduate students (with current stage or degree awarded and placement), postdocs supervised, and undergraduate researchers (with honors thesis titles). Include where mentees went after — placement record is increasingly scrutinized in faculty searches.
+  </Step>
+  <Step title="Service">
+    Organize as service to the profession (journal reviewing, editorial boards, grant panels, conference organizing), service to the university (faculty senate, search committees, curriculum committees), and service to the department (seminar series, colloquium organizing, advising).
+  </Step>
+  <Step title="Awards and Honors">
+    External awards (fellowship competitions, best paper awards, named prizes) carry more weight than internal ones. Include the granting organization and year for every entry.
+  </Step>
+  <Step title="Skills and Additional Information">
+    Research methods, software, languages (for linguists and international scholars), laboratory techniques, and field-specific certifications. Keep this section brief — it supplements your record, not leads it.
+  </Step>
+  <Step title="References">
+    List 3–5 references with full contact information (name, title, institution, email, phone), or write "References available upon request" if the field convention permits. Never omit your dissertation advisor from a references list unless there is a documented professional conflict.
+  </Step>
+</Steps>
+
+## Publication Formatting
+
+Publication formatting conventions vary significantly by discipline. The skill applies the correct style based on your field and consistently formats every entry. Key rules that apply across disciplines:
+
+- **Bold your name** in every author list — search committees need to find your name instantly in multi-author papers
+- **Indicate student co-authors** with an asterisk (*) and a footnote; this demonstrates mentorship
+- **Mark in-review papers** as `Under Review` at the named journal (or `Under Review, journal name withheld per blind review policy` if appropriate); do not list the journal if under blind review
+- **Mark in-preparation papers** as `In Preparation` — use this sparingly; only include papers that are near-complete drafts
+- **Number the entire list** — total publication count is a quick metric committees use; numbering makes it instantly visible
+
+<Tabs>
+  <Tab title="APA (Sciences, Social Sciences)">
+    **Journal Article:**
+    ```text
+    15. Smith, J. A., **Jones, M. B.**, & Williams, C. D. (2023). Mechanisms of
+        synaptic plasticity under chronic stress conditions. Nature Neuroscience,
+        26(4), 512–528. https://doi.org/10.1038/nn.2023.512
+    ```
+
+    **Book Chapter:**
+    ```text
+    4. **Jones, M. B.**, & Smith, J. A. (2022). Stress and memory consolidation.
+       In R. Brown (Ed.), Handbook of cognitive neuroscience (3rd ed., pp. 201–230).
+       Academic Press.
+    ```
+
+    **Under Review:**
+    ```text
+    16. **Jones, M. B.**, Chen, L., & Patel, R. (Under Review). Cortical reorganization
+        following prolonged stress exposure. Proceedings of the National Academy of Sciences.
+    ```
+
+    APA is standard in psychology, education, economics, political science, and many life sciences. Author order carries meaning: first author typically did the primary work; last author is often the senior PI in lab sciences.
+  </Tab>
+  <Tab title="Chicago / Humanities">
+    **Journal Article:**
+    ```text
+    12. **Williams, Sarah**. "Textual Authority and the Margins of Medieval Manuscripts."
+        Speculum: A Journal of Medieval Studies 98, no. 2 (2023): 345–378.
+        https://doi.org/10.1086/speculum.98.345
+    ```
+
+    **Book:**
+    ```text
+    2. **Williams, Sarah**. The Archive and the Void: Memory, Loss, and Medieval Record-Keeping.
+       Chicago: University of Chicago Press, 2022.
+    ```
+
+    **Book Chapter:**
+    ```text
+    5. **Williams, Sarah**. "Literacy and Authority in the Twelfth Century." In Writing and
+       Power in the Middle Ages, edited by James Morgan, 89–115. Princeton: Princeton
+       University Press, 2021.
+    ```
+
+    Chicago is standard across humanities disciplines: history, literature, art history, philosophy, religious studies, and classical studies. In humanities, **single-authored books** carry disproportionate weight; journal articles and book chapters supplement a book record.
+  </Tab>
+  <Tab title="Conference Proceedings (CS / Engineering)">
+    **Conference Paper (ACM / IEEE Style):**
+    ```text
+    8. **Patel, R.**, Zhang, W., and Gupta, A. (2023). "Efficient transformer inference
+       through dynamic token pruning." In Proceedings of the 37th Conference on Neural
+       Information Processing Systems (NeurIPS 2023), New Orleans, LA, USA.
+       https://doi.org/10.48550/arXiv.2303.05678
+    ```
+
+    **Journal Article:**
+    ```text
+    3. **Patel, R.**, and Zhang, W. (2023). Scalable federated learning with
+       differential privacy guarantees. IEEE Transactions on Neural Networks and
+       Learning Systems, 34(8), 4201–4215. https://doi.org/10.1109/TNNLS.2023.3291
+    ```
+
+    In computer science and engineering, **conference proceedings at top venues** (NeurIPS, ICML, CVPR, ICLR, SIGCHI, SOSP) carry nearly equivalent or sometimes greater weight than journal articles. List these prominently and include venue acceptance rates when notable (e.g., "acceptance rate: 21%").
+  </Tab>
+  <Tab title="MLA (Literature / Languages)">
+    **Journal Article:**
+    ```text
+    7. **Chen, David**. "Translating Silence: Absence and Meaning in Contemporary
+       Japanese Fiction." PMLA: Publications of the Modern Language Association of
+       America, vol. 138, no. 3, 2023, pp. 456–471.
+    ```
+
+    **Book:**
+    ```text
+    1. **Chen, David**. Between Languages: Literary Translation and the Limits of
+       Equivalence. New York: Columbia UP, 2022.
+    ```
+
+    MLA is used in literary studies, linguistics, comparative literature, and modern languages. As in other humanities fields, monographs matter more than articles for tenure-track positions, though articles in flagship journals (PMLA, Comparative Literature, ELH) signal significant scholarly standing.
+  </Tab>
+</Tabs>
+
+## Grants and Funding Section
+
+Grant records should include enough detail for a search committee to evaluate the scope and competitiveness of your funding history:
+
+```text
+GRANTS AND FUNDING
+
+Awarded
+
+NSF CAREER Award (PI), "Project Title," National Science Foundation,
+Award #BCS-2345678, 2023–2028, $625,000
+
+NIH R01 (Co-PI), "Project Title," National Institutes of Health,
+Award #R01NS123456, 2022–2027, $2.1M total ($420K direct costs to my lab)
+
+Internal Research Development Grant (PI), "Project Title,"
+University Research Committee, 2022, $18,000
+
+Pending
+
+NIH R21 (PI), "Project Title," submitted March 2024
+
+Not Funded (selected)
+
+NSF Standard Research Grant (PI), reviewed March 2022 (score: 87th percentile)
+```
+
+Listing unfunded submissions with strong review scores is conventional in some fields and frowned upon in others. Ask a senior colleague in your discipline before including this subsection.
+
+## Discipline-Specific Conventions
+
+<Accordion title="STEM (Biology, Chemistry, Physics, Engineering)">
+  - Author order in multi-author papers carries significance: first author did primary work, last author is typically the senior PI
+  - Impact factor of the journal is sometimes noted (follow your department's norms)
+  - Conference proceedings are less weighted than journal articles (except in CS/EE)
+  - Grant amounts in NIH/NSF competitions are well-known benchmarks; include total award and direct costs to your lab
+  - Include your ORCID identifier in the contact header
+</Accordion>
+<Accordion title="Humanities (History, Literature, Philosophy, Art History)">
+  - The book is the primary unit of scholarly contribution; journal articles and chapters supplement a book record for tenure-track positions
+  - Single authorship is the strong norm; collaborative publications may require explanation
+  - Public scholarship (reviews in major publications, public talks, media engagement) is increasingly valued and belongs in its own subsection
+  - Conference papers are listed but carry less weight than seminars and invited lectures
+  - Book contracts (even forthcoming) are significant and should be listed under Publications clearly labeled as such
+</Accordion>
+<Accordion title="Social Sciences (Political Science, Sociology, Economics)">
+  - Both solo and co-authored work are valued; authorship order conventions vary by subfield
+  - Working papers and preprints (SSRN, NBER, SocArXiv) are important to list for active research visibility
+  - Policy publications and government reports may have significant impact and belong in a subsection
+  - Grant funding from SSRC, Russell Sage, Sloan, or private foundations carries field-specific prestige; know your field's hierarchy
+  - Methods expertise (e.g., causal inference, ethnographic fieldwork, computational methods) belongs in a research methods subsection
+</Accordion>
+<Accordion title="Professional Schools (Law, Business, Medicine, Education)">
+  - Clinical, consulting, or professional practice experience may need its own section distinct from academic appointments
+  - Accreditation-specific documentation (bar passage, board certification, clinical credentials) goes in the Education or Licenses section
+  - Professional publications (practitioner journals, trade publications, policy briefs) belong in a separate subsection from peer-reviewed work
+  - Interdisciplinary and applied research is particularly valued; connect scholarship explicitly to practical impact where appropriate
+</Accordion>
+
+## CV Length by Career Stage
+
+Academic CVs grow with your career. There is no maximum length for a complete scholarly record.
+
+| Career Stage | Typical Length |
+|---|---|
+| Senior PhD student (first faculty application) | 3–6 pages |
+| Postdoctoral fellow | 5–10 pages |
+| Early-career faculty (pre-tenure) | 8–15 pages |
+| Associate professor (tenured) | 12–25 pages |
+| Full professor / senior scholar | 20–40+ pages |
+
+Padding is obvious and counterproductive. Length should reflect genuine scholarly output — but do not artificially constrain a complete record to fit an imaginary page limit.
+
+## Trigger Phrases
+
+```text
+"Help me build my academic CV for a faculty position"
+"Format my publications list in APA style"
+"What sections should I include in my postdoc CV?"
+"Review my academic CV for a tenure-track application"
+"Format my grants section with amounts and my role"
+"How do I list in-review papers on my CV?"
+"Help me write the teaching section of my academic CV"
+"Organize my service record for a faculty application"
+```
+
+<Tip>
+  Different disciplines have genuinely different CV norms — what belongs in a STEM CV (conference presentations as minor items, impact factors listed, many co-authors) differs substantially from a humanities CV (monograph as primary signal, single authorship the norm, public lectures listed prominently). The skill will ask your field — STEM, humanities, social sciences, or professional school — before formatting any section, so that the output reflects the standards your search committee actually uses.
+</Tip>

@@ -1,0 +1,219 @@
+---
+title: "Offer Comparison Analyzer: Total Compensation Side-by-Side"
+sidebarTitle: "Offer Comparison"
+description: "Compare multiple job offers with a total compensation breakdown including base, equity, bonus, benefits, and growth potential — then get a data-driven recommendation."
+---
+
+Base salary is only part of an offer. Two jobs with the same base can differ by $60,000 or more in total annual compensation once equity, bonus, benefits, remote flexibility, and retirement matching are factored in — and that gap widens further when you account for career trajectory, company risk, and cost of living. This skill compares every component of multiple offers side-by-side so you can make a fully informed decision, with both the financial math and the non-financial factors laid out in the same place.
+
+## What Gets Compared
+
+Every component of an offer is brought into the comparison — nothing is left off the table:
+
+- **Base salary** — adjusted for geographic cost of living when offers are in different markets (a $160,000 salary in Austin buys more than $160,000 in San Francisco)
+- **Equity** — RSUs and stock options analyzed with vesting schedule, current 409A valuation, and realistic liquidity assumptions; public company RSUs and private company options are treated differently
+- **Signing bonus** — converted to an annual equivalent (one-time payment ÷ expected tenure) so it's comparable to ongoing compensation
+- **Annual bonus** — target percentage plus historical payout rate where available (a 20% target bonus at a company with a 60% average payout is worth less than a 15% target at a company that pays out at 110%)
+- **Benefits** — employer premium contribution for health, dental, and vision; premium vs. standard plan coverage makes a real dollar difference
+- **PTO and parental leave** — days above a standard baseline are assigned a dollar-equivalent; unlimited PTO policies are flagged for actual culture-based assessment
+- **401(k) matching** — calculated as a concrete dollar amount based on your expected contribution, not just the match percentage
+- **Remote/hybrid flexibility** — commute cost, home-office stipend, and effective working-hours saved are calculated as monetary equivalents
+- **Growth trajectory and learning opportunity** — structured as a scored comparison using career development criteria rather than vague impressions
+
+## Total Compensation Formula
+
+Annualizing every component puts all offers on a common denominator. Use this mental model for each component:
+
+**Annualized equity (RSUs — public company):**
+```
+Annual RSU Value = (Grant Value ÷ Vesting Period in Years)
+Example: $200,000 grant over 4 years = $50,000/year
+Note: actual value fluctuates with stock price — use grant date value as baseline
+```
+
+**Equity (options — private company):**
+```
+Intrinsic Value = (Current 409A Price - Strike Price) × Number of Options
+Annualized = Intrinsic Value ÷ Vesting Period
+Note: private equity has liquidity risk — apply a discount factor (commonly 30–70%)
+      depending on company stage, funding, and realistic IPO/acquisition timeline
+```
+
+**Signing bonus (amortized):**
+```
+Annual Equivalent = Signing Bonus ÷ Expected Tenure at Company
+Example: $30,000 signing over 2-year expected stay = $15,000/year equivalent
+Year 1 is always higher — track both year-1 total and ongoing totals
+```
+
+**On-target earnings (OTE) for bonus:**
+```
+Expected Bonus = Base Salary × Target Bonus % × Historical Payout Rate
+Example: $150,000 base × 20% target × 90% historical payout = $27,000/year
+```
+
+**Benefits dollar value:**
+```
+Health Insurance Value = Employer Annual Premium Contribution (ask HR if not stated)
+401(k) Match Value = (Your Annual Contribution) × Match Rate, up to match cap
+HSA/FSA Contribution = Employer's direct contribution amount
+```
+
+## Side-by-Side Comparison
+
+Here's what a complete comparison output looks like for two offers:
+
+| Component | Offer A — TechCorp (SF, Hybrid) | Offer B — StartupCo (Remote) | Notes |
+|---|---|---|---|
+| **Base Salary** | $160,000 | $145,000 | A +$15K nominal |
+| **CoL-Adjusted Base** | $160,000 | $159,500 | Near-equal when remote savings factored |
+| **Signing Bonus** | $20,000 (yr 1 only) | $10,000 (yr 1 only) | A +$10K year 1 |
+| **Annual Bonus (target)** | $24,000 (15% × ~100% hist.) | $14,500 (10% × 100% hist.) | A +$9.5K/yr |
+| **Equity (annual)** | $50,000 (RSUs, 4-yr vest) | $75,000 (options, 4-yr, 40% discount) | B +$25K, but higher risk |
+| **401(k) Match** | $6,400 (4% match) | $8,700 (6% match) | B +$2.3K/yr |
+| **Health/Dental/Vision** | $16,000 (employer premium) | $12,000 (employer premium) | A +$4K/yr |
+| **PTO** | 20 days | Unlimited (est. 18 days actual) | Comparable |
+| **Remote/Commute** | Hybrid — $3,600 commute cost | Fully remote — $0 commute | B +$3.6K/yr |
+| **Home Office Stipend** | None | $2,400/yr | B +$2.4K/yr |
+| **Prof. Development** | $1,500/yr | $3,000/yr | B +$1.5K/yr |
+| **Year 1 Total** | $281,900 | $271,100 | A +$10.8K (yr 1) |
+| **Ongoing Annual Total** | $261,900 | $261,100 | Effectively equal |
+
+The year-1 advantage of Offer A shrinks to near-zero on an ongoing basis. The decision becomes almost entirely about non-financial factors and risk tolerance.
+
+## Trigger Phrases
+
+Use any of the following prompts to activate the comparison workflow. The more offer details you provide, the more precise the analysis:
+
+```text
+"Compare these two job offers" + paste offer details
+"Which job offer should I take?"
+"Help me decide between these offers" + paste details
+"Break down the total compensation for these offers"
+"Analyze my offer packages side-by-side"
+"Is this offer competitive?" + paste offer details
+"What's the real value of this equity package?"
+"How do these benefits compare?"
+```
+
+## Non-Financial Factors
+
+Financial comparisons tell you what each offer is worth today. Non-financial factors tell you what each offer is worth to your career over the next three to five years — which is often the more consequential number.
+
+### Career Growth
+
+The most important career question isn't "how much does it pay?" but "how much will I be worth after two years in this role?" Evaluate each offer on:
+
+- **Learning velocity** — will you be pushed into new skills, industries, or responsibilities, or will you maintain the status quo?
+- **Brand and resume value** — does the company name open doors? Is the role title a meaningful step up?
+- **Promotion trajectory** — is there a clear path, visible role models above you, and a culture of internal promotion?
+- **Scope and ownership** — larger scope accelerates growth; a narrow role with heavy oversight limits it
+
+### Manager Quality
+
+Research consistently shows that manager quality is the single strongest predictor of job satisfaction, retention, and career advancement. Before choosing between offers, ask yourself: How did the hiring manager communicate during the interview process? Did they seem invested in your development or primarily focused on output? Did you hear concrete examples of how they've helped people grow? Did anyone on the team seem genuinely energized? A great manager at a lesser-known company will often accelerate your career more than a weak manager at a prestigious one.
+
+### Company Stage and Stability
+
+Startup and public-company offers require different frameworks:
+
+**Early-stage startups:** Higher upside, higher risk. Equity could be worth multiples of its current paper value — or nothing. Evaluate the funding runway (ask directly how many months of runway they have), the market position, and whether the path to liquidity is credible. The learning opportunity is usually exceptional; the job security is genuinely lower.
+
+**Growth-stage and late-stage startups:** More stability than early-stage, but equity is often the primary financial appeal. Ask about the 409A valuation, the last fundraising round's post-money valuation, and any preferred liquidation preferences that would reduce common shareholder payouts in a below-expectations exit.
+
+**Public companies:** Equity is real, liquid, and predictable. The tradeoff is typically lower upside and a slower pace of change. Brand value and role definition are usually clearer.
+
+### Work-Life Factors
+
+Assign concrete values where possible:
+
+- **Expected hours** — 55-hour weeks versus 45-hour weeks is a real quality-of-life difference; it's also an effective pay-cut of ~18% in time if the salary is the same
+- **On-call requirements** — for engineering or operations roles, the frequency and severity of on-call rotations should be explicit before you accept
+- **Travel requirements** — if a role requires 30% travel and you have young children or prefer to stay local, that's a qualitative cost that doesn't show up in any compensation table
+
+## Weighted Decision Matrix
+
+When the total compensation numbers are close — as they often are between good offers — a weighted matrix makes your actual priorities visible and prevents gut-feel bias from dominating the decision.
+
+<Steps>
+  <Step title="Define Your Priorities">
+    Before scoring either offer, list what matters most to you right now and assign weights that sum to 100%. Be honest — if compensation is genuinely your top priority this cycle, weight it accordingly. Don't adjust weights to justify a decision you've already made emotionally.
+
+    ```text
+    Example weights for a mid-career professional:
+    Total Compensation:     25%
+    Career Growth:          25%
+    Work-Life Balance:      20%
+    Team & Manager Quality: 20%
+    Location / Flexibility: 10%
+    ```
+  </Step>
+  <Step title="Score Each Factor for Each Offer">
+    Rate each offer on each factor from 1–10. Use concrete evidence from the interview process, not speculation. "The manager seemed engaged" is a score of 7; "the team showed me a clear 18-month growth path with examples of recent promotions" is a score of 9.
+
+    ```text
+    Factor                  Offer A    Offer B
+    Total Compensation        8          7
+    Career Growth             7          9
+    Work-Life Balance         8          6
+    Team & Manager Quality    9          7
+    Location / Flexibility    6          9
+    ```
+  </Step>
+  <Step title="Calculate Weighted Score">
+    Multiply each score by its weight and sum the results:
+
+    ```text
+    Offer A:
+    (8 × 0.25) + (7 × 0.25) + (8 × 0.20) + (9 × 0.20) + (6 × 0.10)
+    = 2.00 + 1.75 + 1.60 + 1.80 + 0.60
+    = 7.75
+
+    Offer B:
+    (7 × 0.25) + (9 × 0.25) + (6 × 0.20) + (7 × 0.20) + (9 × 0.10)
+    = 1.75 + 2.25 + 1.20 + 1.40 + 0.90
+    = 7.50
+
+    Result: Offer A (7.75) edges Offer B (7.50) — but the gap is narrow.
+    In this case, re-examine your weights and the growth score difference before deciding.
+    ```
+  </Step>
+  <Step title="Gut-Check the Result">
+    After completing the matrix, ask: does the result match how you feel, or does it surprise you? If the math says Offer A but your instinct says Offer B, that dissonance is information. Either your weights don't reflect your true priorities, or there's a factor you haven't scored that matters more than you admitted. The matrix is a tool for clarity — not a replacement for judgment.
+  </Step>
+</Steps>
+
+## Red Flags in Offer Packages
+
+Some offer components sound better than they are. The skill flags these automatically:
+
+**Vague or conditional bonus language** — "up to 20% bonus" with no historical payout data means the bonus is aspirational, not reliable. Ask for the average payout percentage over the last three years before treating the bonus as part of your expected income.
+
+**Private equity with no liquidity path** — equity in a company with no near-term IPO or acquisition plans, or with a last funding round more than three years ago at a high valuation, may carry significant impairment risk. It has a number on paper but may not convert to cash.
+
+**Cliff longer than one year** — a vesting cliff beyond 12 months means you get nothing if you leave (or are let go) in year one. This is meaningful risk, especially at a startup.
+
+**Verbal promises not in writing** — "we'll give you a raise in six months" or "that responsibility will shift to your team soon" are worth nothing unless they're in the offer letter or a written addendum. Don't accept an offer based on unwritten commitments.
+
+**Non-compete restrictions** — broad non-compete clauses can materially limit your ability to take your next job in the same industry. Review these with a lawyer before signing if the language feels restrictive.
+
+<Note>
+  Financial comparisons are only one input. Once you've built the compensation table, the skill will also ask about your career goals, personal priorities, life stage, and risk tolerance to provide a holistic recommendation — because the right offer depends as much on where you want to be in three years as on what the offers pay today.
+</Note>
+
+## Negotiation Opportunities
+
+Before you accept, the comparison analysis often reveals negotiation leverage:
+
+- If Offer A's base exceeds Offer B's by $15,000, you can use that directly as a competing offer in negotiation
+- If Offer B's equity is richer, you can ask Offer A to close the equity gap
+- If one offer's signing bonus is higher, the other company may match rather than lose a finalist candidate
+- If your weighted matrix shows a clear winner except for one factor (e.g., work-life balance), that's the specific negotiation target — ask for the thing that would make the decision obvious
+
+Most candidates negotiate salary. The most effective candidates negotiate the specific package component that matters most to them — and they know which component that is because they've done this analysis first.
+
+## Pairing With Other Skills
+
+- Use [`salary-negotiation-prep`](/skills/salary-negotiation-prep) once you've identified which offer to negotiate and which components to target
+- Use [`interview-prep-generator`](/skills/interview-prep-generator) if you're still in the interview process with one or more companies and want to keep your options open
+- Use [`job-description-analyzer`](/skills/job-description-analyzer) if you're comparing offers alongside pending applications to understand the relative quality of the opportunities in your pipeline

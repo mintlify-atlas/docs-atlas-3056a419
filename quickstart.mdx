@@ -1,47 +1,129 @@
 ---
-title: "Quickstart"
-description: "Begin with a guide on the fastest path to a successful outcome"
+title: "Get Started with ResumeSkills in Under 2 Minutes"
+sidebarTitle: "Quickstart"
+description: "Install all 20 ResumeSkills AI agent skills globally and run your first resume optimization with Claude Code in under 2 minutes."
 ---
 
-Describe how someone begins using your product. What is the first thing they need to do? Are there any prerequisites?
+This guide gets you from zero to running real resume tasks in under two minutes. You'll install all 20 ResumeSkills globally so they're available in every project, verify the installation, and then walk through three example prompts that demonstrate different skills in action. By the end, your AI assistant will have expert-level knowledge of ATS optimization, bullet writing, job matching, interview prep, and salary negotiation — ready to use the moment you describe a task.
 
-A quickstart should take someone from zero to using your product. They'll get a quick win and a sense of what they can accomplish.
-
-## Prerequisites
-
-Before you begin, you must have:
-
-- Requirement one (for example, Node.js 18+, a free account, an API key)
-- Requirement two (for example, a compatible device, a compatible browser, a compatible operating system)
-
-## Get started
+<Note>
+  Installing with the `-g` flag makes all 20 skills available globally across every project and directory on your machine. If you'd prefer to install only in a specific project, omit `-g` and run the command from inside that project folder. See the [Installation guide](/installation) for the full breakdown.
+</Note>
 
 <Steps>
-  <Step title="Install">
-    Describe how to install your product or sign up.
+  <Step title="Install ResumeSkills">
+    Run the following command in your terminal to install all 20 ResumeSkills globally:
 
     ```bash
-    npm install your-package
+    npx skills add Paramchoudhary/ResumeSkills -g -y
+    ```
+
+    **Flag reference:**
+    - `-g` — installs skills globally, making them available in every project and directory on your machine
+    - `-y` — skips the confirmation prompt and installs immediately without user input
+
+    The command fetches all 20 skill files from the `Paramchoudhary/ResumeSkills` repository and places them in the appropriate global skills directory for your AI agent (e.g., `~/.claude/skills/` for Claude Code, `~/.cursor/skills/` for Cursor).
+  </Step>
+
+  <Step title="Verify installation">
+    Confirm that all skills installed correctly by listing your global skills:
+
+    ```bash
+    npx skills list --global
+    ```
+
+    You should see all 20 ResumeSkills in the output, including `resume-ats-optimizer`, `resume-bullet-writer`, `job-description-analyzer`, `cover-letter-generator`, `interview-prep-generator`, and the rest of the collection. If you installed per-project instead of globally, run `npx skills list` (without the `--global` flag) from inside your project directory.
+  </Step>
+
+  <Step title="Open your AI assistant">
+    Launch Claude Code, Cursor, or whichever AI assistant you use. Because the skills were installed globally, they're already loaded and ready — no further configuration required. The AI will automatically recognize when a task matches a skill's trigger conditions and apply the appropriate framework.
+
+    ```bash
+    # Claude Code
+    claude
+
+    # Or open your project in Cursor, Windsurf, or any other supported assistant
     ```
   </Step>
-  <Step title="Configure">
-    Describe any setup or configuration needed before first use.
 
-    ```bash
-    your-cli init
+  <Step title="Run your first optimization">
+    Try one of these prompts to see ResumeSkills in action. Each prompt triggers a different skill:
+
     ```
+    "Optimize my resume for ATS"
+    → Triggers resume-ats-optimizer
+       Checks formatting, keyword density, section structure, and ATS compatibility
+
+    "Improve my resume bullets"
+    → Triggers resume-bullet-writer
+       Transforms weak duty-focused statements into achievement-focused bullets with metrics
+
+    "Should I apply to this job?" + paste a job description
+    → Triggers job-description-analyzer
+       Calculates your match score, surfaces gaps and strengths, flags red flags
+    ```
+
+    Paste your resume text directly into the chat along with your prompt. The AI will apply the relevant skill's full framework to your actual content.
   </Step>
-  <Step title="Run it">
-    Show the first thing a user does to see it working.
 
-    ```bash
-    your-cli start
-    ```
+  <Step title="Explore more skills">
+    ResumeSkills covers every stage of the job search across five categories:
+
+    - **Resume Optimization** — `resume-ats-optimizer`, `resume-bullet-writer`, `resume-quantifier`, `resume-formatter`, `resume-section-builder`
+    - **Job Search Strategy** — `job-description-analyzer`, `resume-tailor`, `resume-version-manager`, `offer-comparison-analyzer`
+    - **Supporting Documents** — `cover-letter-generator`, `linkedin-profile-optimizer`, `portfolio-case-study-writer`, `reference-list-builder`
+    - **Interview & Negotiation** — `interview-prep-generator`, `salary-negotiation-prep`
+    - **Specialized Roles** — `tech-resume-optimizer`, `executive-resume-writer`, `academic-cv-builder`, `creative-portfolio-resume`, `career-changer-translator`
+
+    Each skill is triggered naturally by describing what you need — you don't have to reference skill names explicitly.
   </Step>
 </Steps>
 
-<Tip>
-  Give people a way to get help. This could be a link to a support page, a chat with a customer support agent, or a forum for your product.
+## Example Workflows
 
-  Example: Need help? Reach out to us at [support@yourcompany.com](mailto:support@yourcompany.com).
-</Tip>
+These three end-to-end workflows show how multiple skills work together in a single conversation to handle real job search scenarios.
+
+### Full Resume Optimization
+
+Start with your existing resume and a target role. Claude will work through a complete optimization pass:
+
+```
+User: Here's my resume [paste]. I'm applying to data scientist roles. Help me optimize it.
+
+Claude will:
+1. Run ATS compatibility check — flag formatting issues, missing keywords, section problems
+2. Analyze against common data scientist job requirements — surface skill gaps and strengths
+3. Improve bullet points with metrics — apply XYZ formula to every achievement statement
+4. Suggest keyword additions — identify high-value terms missing from your current resume
+5. Format for ATS compatibility — clean up structure, whitespace, and section headers
+```
+
+### Job-Specific Tailoring
+
+Paste a job description alongside your resume to get a fit analysis and tailoring strategy before you invest time applying:
+
+```
+User: Here's a job description [paste] and my resume [paste]. Should I apply?
+
+Claude will:
+1. Calculate match score — percentage of required and preferred qualifications you meet
+2. Identify gaps and strengths — what you have that they want, and what's missing
+3. Flag red flags in the posting — unrealistic requirements, unclear scope, warning signs
+4. Provide resume customization strategy — exactly what to change to maximize fit
+5. Generate cover letter talking points — the 3–4 angles most likely to resonate
+```
+
+### Interview Preparation
+
+Give Claude your resume and the company/role details to get a complete prep package:
+
+```
+User: I have an interview at [Company] for [Role]. Here's my resume. Help me prepare.
+
+Claude will:
+1. Generate STAR stories — pull experiences from your resume and frame them as Situation, Task, Action, Result narratives
+2. Predict likely interview questions — based on the role level, company type, and your background
+3. Create talking points for each bullet — turn every line item into a conversational proof point
+4. Research company-specific prep — tailor prep to the company's known culture and interview style
+5. Prepare questions to ask — thoughtful questions that demonstrate genuine interest and research
+```

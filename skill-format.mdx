@@ -1,0 +1,216 @@
+---
+title: "Skill File Format: Structure and Guidelines for ResumeSkills"
+sidebarTitle: "Skill Format"
+description: "The required markdown structure for all ResumeSkills files — sections, formatting conventions, and quality standards every skill must meet."
+---
+
+All skills in ResumeSkills follow a consistent markdown structure so AI agents can reliably parse and apply them. This structure is not arbitrary — each section serves a specific purpose in how the AI agent reads, activates, and executes a skill. Following this format ensures your skill integrates cleanly with Claude Code, Cursor, Windsurf, and the 30+ other AI assistants that the library supports. Deviating from the format risks the skill being ignored, misapplied, or producing inconsistent output.
+
+## Required File Structure
+
+Every skill file must include the following skeleton. Replace bracketed placeholders with real content specific to your skill — no section should contain placeholder text in the final submission.
+
+```markdown
+# Skill Name
+
+## When to Use This Skill
+
+[Describe trigger conditions - when Claude should use this skill]
+- Use when the user mentions [specific keywords]
+- Use when the user wants to [specific action]
+- Use when working with [specific content]
+
+## Core Capabilities
+
+[Brief bullet list of what this skill does]
+
+## [Main Content Sections]
+
+Include:
+- Overview & Context
+- Frameworks & Methodologies  
+- Step-by-step Process
+- Output Requirements/Formats
+- Examples (Before/After)
+- Edge Cases & Special Situations
+- Implementation Checklist
+```
+
+## Section Breakdown
+
+Each section in the skill file has a distinct role. Understanding what each section does will help you write a skill that fires reliably and produces high-quality output.
+
+<Accordion title="When to Use This Skill">
+  This is the most critical section for agent behavior. It defines the **trigger conditions** — the keywords, user intent signals, and content types that tell the AI agent this skill is the right one to apply.
+
+  Be as specific as possible. Broad triggers like "when the user mentions resume" will cause the skill to fire too often. Narrow triggers like "when the user asks to optimize resume bullets for impact" fire at exactly the right moment.
+
+  **What to include:**
+  - Specific keywords and phrases that should activate the skill
+  - Descriptions of user intent (e.g., "wants to improve", "needs to tailor", "is preparing for")
+  - Content types the skill is designed to work with (resume files, job descriptions, LinkedIn profiles)
+
+  **Example (from `resume-bullet-writer`):**
+  ```markdown
+  ## When to Use This Skill
+
+  - Use when the user mentions "weak bullets", "improve bullets", or "achievement statements"
+  - Use when the user wants to make resume bullets more impactful or results-focused
+  - Use when working with resume content that lacks metrics or uses passive language
+  ```
+</Accordion>
+
+<Accordion title="Core Capabilities">
+  A short, scannable bullet list of everything the skill can do. This section gives the AI agent (and human readers) a quick summary of the skill's full scope before diving into the detailed instructions.
+
+  Keep each bullet to one line. Lead with an action verb. Avoid restating the skill name.
+
+  **Example (from `job-description-analyzer`):**
+  ```markdown
+  ## Core Capabilities
+
+  - Calculate a match score between a resume and job description
+  - Identify skill gaps and areas of strong alignment
+  - Flag red flags in job postings (unrealistic expectations, vague requirements)
+  - Generate a prioritized application strategy
+  - Create a list of keywords to incorporate into the tailored resume
+  ```
+</Accordion>
+
+<Accordion title="Frameworks & Methodologies">
+  Document any named frameworks the skill uses, with enough explanation for the AI to apply them correctly. Don't assume the AI knows a framework by name alone — spell out the structure.
+
+  Common frameworks used across ResumeSkills:
+
+  | Framework | Full Name | Used In |
+  |-----------|-----------|---------|
+  | CAR | Challenge → Action → Result | `resume-bullet-writer`, `interview-prep-generator` |
+  | STAR | Situation → Task → Action → Result | `interview-prep-generator` |
+  | PAR | Problem → Action → Result | `resume-bullet-writer` |
+  | ATS scoring | Keyword density and formatting rules | `resume-ats-optimizer`, `resume-tailor` |
+
+  Each framework entry should explain the structure, show an example of it applied, and note when to use it versus alternatives.
+</Accordion>
+
+<Accordion title="Step-by-step Process">
+  The exact sequence of steps the AI agent should follow when executing the skill. This is the operational core of the skill — write it as if you're programming a workflow, because in a sense you are.
+
+  **Best practices:**
+  - Number every step
+  - One action per step — do not combine multiple decisions into a single step
+  - Specify what the AI should output at each step (e.g., "output a numbered list", "show a before/after table")
+  - Include decision points where the AI should branch based on what it finds (e.g., "if no metrics are present, proceed to step 4 to estimate")
+
+  **Example structure:**
+  ```markdown
+  ## Step-by-Step Process
+
+  1. Read the full resume to understand scope and seniority level.
+  2. Identify all bullet points using passive language or missing quantification.
+  3. For each weak bullet, apply the CAR framework to reconstruct it.
+  4. If no exact metric is available, generate a reasonable estimate with a note to verify.
+  5. Output a before/after table showing the original and improved version of each bullet.
+  6. Run the Implementation Checklist before delivering final output.
+  ```
+</Accordion>
+
+<Accordion title="Examples (Before/After)">
+  Concrete before/after transformations are one of the highest-value sections in a skill. They give the AI agent a pattern to follow and show contributors (and users) exactly what good output looks like.
+
+  **Requirements for examples:**
+  - Use realistic job titles, company types, and responsibilities — not generic placeholder text
+  - Show at least two examples across different experience levels or industries when possible
+  - Format using a clear before/after structure (table or labeled blocks both work)
+
+  **Example format:**
+  ```markdown
+  ## Examples
+
+  **Before:**
+  > Responsible for managing social media accounts for the company.
+
+  **After:**
+  > Grew Instagram following from 4,200 to 31,000 in 8 months by implementing
+  > a data-driven content strategy, increasing engagement rate from 1.2% to 4.7%.
+  ```
+</Accordion>
+
+<Accordion title="Edge Cases & Special Situations">
+  Document the situations where the standard workflow needs to be modified. Skills that handle edge cases gracefully are significantly more reliable in real-world use.
+
+  **Common edge cases to consider:**
+  - Entry-level candidates with no quantifiable metrics
+  - Career changers whose experience doesn't map directly to the target role
+  - Academic CVs vs. industry resumes (different conventions)
+  - International formats (European CVs, UK spelling, different date formats)
+  - Highly regulated industries (healthcare, legal, government) with specific compliance requirements
+  - Candidates with employment gaps
+
+  For each edge case, specify what the AI should do differently and why.
+</Accordion>
+
+<Accordion title="Implementation Checklist">
+  A QA checklist the AI agent runs through before delivering its final output. This section acts as a quality gate — it catches omissions and ensures the output meets the skill's stated standards before the user sees it.
+
+  Format as a markdown task list. The AI will verify each item against its output before responding.
+
+  **Example (from `resume-ats-optimizer`):**
+  ```markdown
+  ## Implementation Checklist
+
+  - [ ] All section headers use standard ATS-readable labels (Experience, Education, Skills)
+  - [ ] No tables, columns, text boxes, or graphics that could break ATS parsing
+  - [ ] Keywords from the job description are incorporated naturally
+  - [ ] Contact information is in plain text at the top of the document
+  - [ ] Dates are formatted consistently (MM/YYYY or Month YYYY)
+  - [ ] File is saved or described as .docx or plain-text PDF
+  ```
+</Accordion>
+
+## Quality Standards
+
+Every skill submitted to ResumeSkills must meet the following quality bar before it will be merged. These are not suggestions — they are requirements.
+
+<Note>
+  Skills that do not meet these standards will be returned for revision with specific feedback on what needs to improve before merging.
+</Note>
+
+- **Specific, actionable instructions** — every step tells the AI exactly what to do, not just what to think about. Vague guidance produces inconsistent output.
+- **Real-world before/after examples** — at least one complete transformation using realistic resume content, not filler text.
+- **Checklists for quality assurance** — an Implementation Checklist that the AI can run before delivering output to the user.
+- **Edge case coverage** — the skill explicitly handles at least three non-standard situations (entry-level, career changer, industry-specific variation, etc.).
+- **Tested against actual resumes** — the contributor has run the skill against real or realistic resume samples and confirmed the output is high-quality and consistent.
+
+## Naming Convention
+
+All skill files use **kebab-case** naming that exactly matches the skill's ID. The skill ID is how AI agents reference skills internally and how users install individual skills via the CLI. The file lives inside the `/skills/` directory of the repository.
+
+```
+/skills/<skill-id>/skill.md
+```
+
+<Warning>
+  Do not use camelCase, PascalCase, spaces, or underscores in skill file names. AI agents and the CLI tool rely on consistent kebab-case naming to locate and load skills correctly.
+</Warning>
+
+## File Naming Examples
+
+| Skill ID | File Path |
+|----------|-----------|
+| `resume-ats-optimizer` | `/skills/resume-ats-optimizer/skill.md` |
+| `resume-bullet-writer` | `/skills/resume-bullet-writer/skill.md` |
+| `cover-letter-generator` | `/skills/cover-letter-generator/skill.md` |
+| `job-description-analyzer` | `/skills/job-description-analyzer/skill.md` |
+| `linkedin-profile-optimizer` | `/skills/linkedin-profile-optimizer/skill.md` |
+| `career-changer-translator` | `/skills/career-changer-translator/skill.md` |
+| `executive-resume-writer` | `/skills/executive-resume-writer/skill.md` |
+| `salary-negotiation-prep` | `/skills/salary-negotiation-prep/skill.md` |
+
+When creating a new skill, choose an ID that is:
+- **Descriptive** — a new user can understand the skill's purpose from the name alone
+- **Concise** — two to four words is the sweet spot
+- **Action-oriented** — prefer `resume-bullet-writer` over `resume-bullets` or `bullet-improvement`
+
+<Tip>
+  The more specific your trigger conditions in `When to Use This Skill`, the more reliably your skill fires at the right moment. Overly broad triggers cause skill collisions where the wrong skill activates; overly narrow triggers mean the skill never activates at all. Aim for precision — identify the exact phrases and intent signals that uniquely characterize the use case your skill addresses.
+</Tip>

@@ -1,0 +1,174 @@
+---
+title: "Job Description Analyzer: Match Score, Gaps, and Application Strategy"
+sidebarTitle: "JD Analyzer"
+description: "Analyze any job posting to calculate your resume match score, identify must-have gaps, flag red flags in the posting, and get a custom application strategy."
+---
+
+Paste a job description and your resume — this skill calculates how well you match, surfaces the gaps that matter most, flags warning signs in the posting, and gives you a data-driven recommendation on whether to apply and how. Instead of spending 45 minutes tailoring a resume only to discover you meet 40% of the requirements, run this analysis first. You'll know within minutes whether the role is worth pursuing and exactly what to emphasize if it is.
+
+## What the Analysis Covers
+
+Every job description analysis produces a complete picture of your candidacy for that specific role:
+
+- **Match score (%)** — a weighted percentage that reflects how well your background maps to the job's stated requirements
+- **Required vs. nice-to-have skills mapping** — requirement categories split by must-have and preferred, each checked against your resume
+- **Experience level check** — confirms your years of experience and seniority tier align with what the posting actually demands
+- **Compensation range research** — when a salary range is listed, the skill cross-references market data to flag whether it's competitive, low, or unusually wide
+- **Red flag detection** — scans the posting language for unrealistic skill stacks, vague descriptions, perpetual re-posting patterns, and high-turnover signals
+- **Application strategy recommendation** — a concrete next step: apply immediately, apply with strategic framing, treat as a stretch, or redirect your time to better-fit roles
+
+## Trigger Phrases
+
+Use any of the following prompts to activate the analyzer. For the most complete analysis, paste both your resume and the job description in the same message:
+
+```text
+"Should I apply to this job?" + paste JD
+"Analyze this job description" + paste JD
+"How well does my resume match this job?" + paste resume + JD
+"What's my match score for this role?"
+"What skills am I missing for this job?"
+"Is this job worth applying to?" + paste JD
+"Give me a gap analysis for this position" + paste resume + JD
+```
+
+## Match Score Breakdown
+
+The skill runs a five-step analysis to calculate your score. Each step feeds into a final weighted result that drives the application recommendation.
+
+<Steps>
+  <Step title="Required Skills Extraction">
+    The skill reads the full job description and separates required qualifications from preferred ones. It looks for explicit signals: language like "must have," "required," "you have X years," and listing position under a "Requirements" or "Qualifications" heading all indicate hard requirements. Terms appearing three or more times anywhere in the posting are also promoted to required status — repetition signals genuine priority. The output is a categorized checklist of every hard requirement the employer listed, ordered by apparent importance.
+  </Step>
+  <Step title="Nice-to-Have Skills Extraction">
+    Preferred qualifications are catalogued separately. Phrases like "nice to have," "bonus if you have," "ideally you'd bring," and "a plus if" mark this tier. Nice-to-have items are weighted at 30% of the total score so they meaningfully influence the result without penalizing candidates who don't match every preference. This is also the list that identifies where you can differentiate — hitting 5 of 6 preferred qualifications when other candidates hit 2 is a competitive edge worth calling out in your cover letter.
+  </Step>
+  <Step title="Experience Years Check">
+    The skill extracts the stated years-of-experience requirement and compares it to the total relevant experience in your resume. It distinguishes between years in a specific function (e.g., "5 years in B2B SaaS product management") and total career years. Gaps of two years or fewer are flagged as addressable rather than disqualifying. Gaps larger than 50% of the stated requirement are marked critical and factored into the recommendation accordingly.
+  </Step>
+  <Step title="Education and Certification Check">
+    Any stated education requirements (degree type, field of study) and required certifications (PMP, CPA, AWS Certified, etc.) are checked against your background. The skill distinguishes between certifications listed as required versus those listed as preferred. Missing a "required" certification is flagged as a potential deal-breaker; missing a "preferred" one is noted as a growth area you can address in your cover letter or actively pursue before applying.
+  </Step>
+  <Step title="Score Calculation and Recommendation">
+    Your final match score is calculated with required qualifications weighted at 70% and preferred qualifications at 30%: `(Required Match % × 0.70) + (Preferred Match % × 0.30)`. The score maps to one of four recommendation tiers (see the table below), each with a specific action. The output also includes a prioritized list of the three to five most relevant experiences to lead with, and two to three gaps you should either address in your cover letter or actively close before applying.
+  </Step>
+</Steps>
+
+## Reading Your Match Score
+
+Your score determines how to allocate your time. The thresholds below reflect realistic ATS and recruiter screening behavior — not arbitrary cutoffs.
+
+| Score | Classification | Recommended Action |
+|---|---|---|
+| 85–100% | Strong match | Apply and tailor — this role was written for someone like you |
+| 70–84% | Good match | Apply with strategic framing — a strong cover letter bridges the gaps |
+| 55–69% | Stretch role | Apply if this is a clear career-growth step, not just a lateral move |
+| Below 55% | Poor match | Consider investing time in better-fit roles — the effort-to-response ratio is low |
+
+## Red Flags to Watch
+
+Beyond your match score, the skill scans the job posting itself for signals that the role or company may not be what it appears. These flags don't automatically disqualify a role — but they warrant research before you invest time applying.
+
+**Unrealistic skill stacks** are the most common red flag: postings that require 8–10 years of experience with technologies that have only existed for 3–4 years, or that list 15+ required technical proficiencies at the same experience tier, signal either unrealistic expectations from a non-technical hiring manager, a role that was written by committee, or a perpetually unfilled position where the bar keeps moving.
+
+**Perpetually reposted roles** show up when you search the company name and job title and find the same listing posted multiple times over 6–12 months. This can indicate the role is genuinely hard to fill (sometimes for good reasons), that previous hires didn't work out, or that the role itself is structurally unstable.
+
+**Vague compensation language** — phrases like "competitive salary," "DOE with no range," or "equity-heavy" without any cash baseline — makes evaluating the opportunity difficult and often signals the actual comp is below market. In states with salary transparency laws, a company that omits ranges may be deliberately hiding below-market offers.
+
+**Excessive requirements for the stated level** — a job titled "Associate" or "Coordinator" that requires 5+ years of experience, an advanced degree, and deep technical expertise is either mislabeled (and likely underpaid for the actual expectations) or reflects organizational dysfunction around role definition.
+
+## Sample Analysis Output
+
+When you paste a job description and your resume, you'll receive a structured report:
+
+```markdown
+# JOB ANALYSIS REPORT
+
+**Position:** Senior Product Manager — Developer Platform
+**Company:** TechCorp, Inc.
+**Location:** San Francisco, CA (Hybrid)
+**Salary Range:** $145,000–$180,000 + equity
+
+══════════════════════════════════════════════
+
+## OVERALL MATCH SCORE: 78% ✅
+**Recommendation:** STRONG FIT — Apply within 48 hours
+
+══════════════════════════════════════════════
+
+## REQUIREMENTS BREAKDOWN
+
+### Required Skills — 8/10 ✅
+✅ 5+ years product management experience (You have: 6 years)
+✅ B2B SaaS product experience (You have: 4 years)
+✅ Agile/Scrum methodology (You have: 5 years)
+✅ Cross-functional team leadership (You have: Strong signal in 3 roles)
+✅ Data-driven decision making (You have: Quantified in 4 bullets)
+✅ API product experience (You have: 2 years)
+✅ Product roadmap ownership (You have: Mentioned across all roles)
+✅ User research (You have: 2 years)
+❌ SQL / independent data querying (You have: Basic Excel only) ⚠️
+❌ Mobile product experience (Not present) — Minor gap
+
+### Preferred Skills — 4/6 ✅
+✅ MBA or equivalent advanced degree
+✅ Developer tools domain experience (2 years)
+✅ Payment systems exposure (1 year)
+✅ International market experience (EU team collaboration)
+❌ E-commerce background
+❌ ML/AI product ownership
+
+══════════════════════════════════════════════
+
+## GAPS TO ADDRESS
+
+**Critical Gaps:** None ✅
+
+**Major Gap: SQL / Data Analysis**
+Mentioned 5× in the job description. Strategy: Address honestly in
+your cover letter and emphasize your analytical mindset and
+partnership with data teams. Do not omit from discussion.
+
+**Minor Gap: Mobile product experience**
+Mentioned 2× only. Not a disqualifier — don't proactively surface
+this. If asked in interview, pivot to "transferable product skills."
+
+══════════════════════════════════════════════
+
+## RED FLAGS DETECTED
+
+⚠️  "Fast-paced environment" appears 2× — may signal high pressure
+    or ambiguity. Research Glassdoor before applying.
+✅  Detailed JD with specific tooling mentioned (Amplitude, JIRA)
+    — signals operational maturity.
+✅  Hybrid flexibility explicitly offered — positive culture signal.
+
+══════════════════════════════════════════════
+
+## APPLICATION RECOMMENDATION
+
+APPLY. Your developer tools + B2B SaaS background differentiates
+you. The SQL gap is addressable. Post is 2 days old — apply today.
+```
+
+## Requirement Classification Guide
+
+Knowing what language signals a hard requirement versus a preference lets you interpret any job description accurately — even poorly written ones.
+
+**Hard requirement signals:** "must have," "required," "you have X years," "essential qualifications," listed under a "Requirements" or "Minimum Qualifications" heading, or mentioned three or more times anywhere in the posting.
+
+**Preferred qualification signals:** "nice to have," "bonus if you have," "preferred qualifications," "ideally you'd bring," "a plus if," or mentioned only once or twice in supporting sections.
+
+**Absolute deal-breakers** — situations where applying is unlikely to succeed regardless of your other qualifications — include: a required license or certification you do not hold and cannot quickly obtain (medical, legal, CPA, security clearance), a years-of-experience requirement you fall short of by more than 50%, a required degree explicitly listed as non-negotiable, or a location or travel requirement you genuinely cannot meet.
+
+<Tip>
+  Run this skill before spending time tailoring your resume. A sub-55% match usually means your time is better invested on better-fit roles — the signal-to-noise ratio on applications below that threshold drops sharply, and a well-targeted application to a 78% match will almost always outperform five rushed applications to 40% matches.
+</Tip>
+
+## Pairing With Other Skills
+
+The Job Description Analyzer is designed as the first step in a strategic application workflow:
+
+1. **Run this skill first** to decide whether to apply and what to emphasize
+2. Use [`resume-tailor`](/skills/resume-tailor) to customize your resume based on the gap analysis
+3. Use [`cover-letter-generator`](/skills/cover-letter-generator) to turn the talking points from this report into a personalized cover letter
+4. Use [`resume-version-manager`](/skills/resume-version-manager) to save the tailored version and track where it was submitted

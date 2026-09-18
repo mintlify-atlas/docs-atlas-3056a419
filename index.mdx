@@ -1,20 +1,131 @@
 ---
-title: "Introduction"
-description: "Welcome to your project"
+title: "ResumeSkills: AI-Powered Resume & Career Skills for Claude Code"
+sidebarTitle: "Home"
+description: "20 specialized AI agent skills for resume optimization, ATS compatibility, job matching, interview prep, and career development — works with Claude Code and 30+ AI assistants."
 ---
 
-Write a short description of your product here. What it does, who it's for, and what they can accomplish with it.
+ResumeSkills is a collection of 20 markdown-based AI agent skills that give Claude Code and other AI assistants deep, specialized knowledge for resume writing, job search strategy, interview preparation, and career development. Install once and your AI assistant gains expert-level workflows for every stage of a job search.
+
+<CardGroup cols={2}>
+  <Card title="Quick Start" icon="rocket" href="/quickstart">
+    Get ResumeSkills installed and running your first optimization in under 2 minutes.
+  </Card>
+  <Card title="Installation" icon="download" href="/installation">
+    Install globally or per-project via CLI, manual copy, or direct download.
+  </Card>
+  <Card title="Resume Optimization" icon="file-lines" href="/skills/resume-ats-optimizer">
+    Pass ATS filters, write achievement bullets, add metrics, and format for scannability.
+  </Card>
+  <Card title="Job Search Strategy" icon="magnifying-glass" href="/skills/job-description-analyzer">
+    Match resumes to job postings, tailor applications, and compare offers.
+  </Card>
+  <Card title="Interview & Negotiation" icon="comments" href="/skills/interview-prep-generator">
+    Generate STAR stories, practice questions, and salary negotiation scripts.
+  </Card>
+  <Card title="Specialized Roles" icon="briefcase" href="/skills/tech-resume-optimizer">
+    Tailored skills for tech, executive, academic, creative, and career-change roles.
+  </Card>
+</CardGroup>
+
+## Why ResumeSkills?
+
+75% of resumes are rejected by Applicant Tracking Systems before a human ever reads them. Most job seekers apply broadly with generic materials, write bullets without metrics, and enter salary conversations unprepared. ResumeSkills fixes all of this by equipping your AI assistant with the exact frameworks recruiters and hiring managers look for.
+
+<CardGroup cols={3}>
+  <Card title="2–3× More Interviews" icon="chart-line">
+    Optimized, tailored applications generate significantly more recruiter responses per application sent.
+  </Card>
+  <Card title="2 Months Faster" icon="clock">
+    Strategic job matching and ready-made materials cut average job search timelines dramatically.
+  </Card>
+  <Card title="$10K+ Higher Offers" icon="dollar-sign">
+    Market-rate research and negotiation scripts lead to measurably better compensation outcomes.
+  </Card>
+</CardGroup>
+
+## Available Skills
+
+ResumeSkills ships 20 skills across five categories:
+
+### Resume Optimization
+| Skill | What it does |
+|-------|-------------|
+| `resume-ats-optimizer` | Pass ATS systems with keyword and format analysis |
+| `resume-bullet-writer` | Transform weak bullets into achievement-focused statements |
+| `resume-quantifier` | Add metrics and numbers to every achievement |
+| `resume-formatter` | Clean, scannable, ATS-friendly formatting |
+| `resume-section-builder` | Targeted sections for different experience levels |
+
+### Job Search Strategy
+| Skill | What it does |
+|-------|-------------|
+| `job-description-analyzer` | Calculate match scores, identify gaps, build application strategy |
+| `resume-tailor` | Customize resume for each job while staying truthful |
+| `resume-version-manager` | Track master and tailored resume versions |
+| `offer-comparison-analyzer` | Compare total compensation side-by-side |
+
+### Supporting Documents
+| Skill | What it does |
+|-------|-------------|
+| `cover-letter-generator` | Personalized cover letters from resume + job description |
+| `linkedin-profile-optimizer` | Sync resume with LinkedIn and optimize for search |
+| `portfolio-case-study-writer` | Turn bullets into detailed portfolio case studies |
+| `reference-list-builder` | Format and prepare professional references |
+
+### Interview & Negotiation
+| Skill | What it does |
+|-------|-------------|
+| `interview-prep-generator` | STAR stories, practice questions, company-specific prep |
+| `salary-negotiation-prep` | Market rates, negotiation strategy, counter-offer scripts |
+
+### Specialized Roles
+| Skill | What it does |
+|-------|-------------|
+| `tech-resume-optimizer` | Engineering, PM, and technical role optimization |
+| `executive-resume-writer` | C-suite and VP-level leadership resumes |
+| `academic-cv-builder` | CVs with publications, grants, and teaching experience |
+| `creative-portfolio-resume` | Balance visual design with ATS compatibility |
+| `career-changer-translator` | Identify and translate transferable skills |
+
+## Supported AI Assistants
+
+ResumeSkills works with any AI coding assistant that supports skills/context files:
+
+<CardGroup cols={3}>
+  <Card title="Claude Code" icon="terminal">
+    The primary target — full skills support built in.
+  </Card>
+  <Card title="Cursor" icon="pen-to-square">
+    Install to `~/.cursor/skills/` for IDE-native support.
+  </Card>
+  <Card title="Windsurf, Codex & more" icon="plug">
+    Gemini CLI, Amp, Antigravity, Augment, and 30+ other agents.
+  </Card>
+</CardGroup>
+
+## Get Started
+
+<Steps>
+  <Step title="Install all 20 skills globally">
+    ```bash
+    npx skills add Paramchoudhary/ResumeSkills -g -y
+    ```
+  </Step>
+  <Step title="Open your AI assistant">
+    Launch Claude Code, Cursor, or your preferred AI coding assistant in any project.
+  </Step>
+  <Step title="Ask for help with your resume">
+    ```
+    "Optimize my resume for ATS" — uses resume-ats-optimizer
+    "Improve my resume bullets" — uses resume-bullet-writer
+    "Write me a cover letter for this role" — uses cover-letter-generator
+    ```
+  </Step>
+  <Step title="Iterate and apply">
+    Work through the skills in sequence — optimize, tailor, write supporting documents, then prep for interviews.
+  </Step>
+</Steps>
 
 <Tip>
-  Ready to make this your own? Start by editing this page. Update your `docs.json` file to customize your site. Then fill out the [Quickstart](/quickstart) page.
+  Install globally with `-g` so the skills are available in every project, not just the current directory.
 </Tip>
-
-<Card title="Quickstart" icon="rocket" href="/quickstart">
-  This card links to the quickstart page in your project.
-</Card>
-<Card title="Components" icon="puzzle-piece" href="https://mintlify.com/docs/components">
-  Add cards, callouts, steps, tabs, and more to design and structure your pages.
-</Card>
-<Card title="Settings" icon="gear" href="https://mintlify.com/docs/organize/settings">
-  Set your site name, branding, and navigation in the `docs.json` file.
-</Card>

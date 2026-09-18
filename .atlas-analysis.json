@@ -1,23 +1,11 @@
 {
-  "$schema": "https://mintlify.com/docs.json",
-  "name": "ResumeSkills",
+  "projectType": "general",
+  "projectName": "ResumeSkills",
+  "projectDescription": "A collection of AI agent skills for Claude Code and other AI assistants that automate resume optimization, ATS compatibility, job matching, interview prep, and career development workflows.",
   "theme": "palm",
-  "colors": {
-    "primary": "#2563EB",
-    "light": "#EFF6FF",
-    "dark": "#1E40AF"
-  },
-  "navbar": {
-    "primary": {
-      "type": "github",
-      "href": "https://github.com/Paramchoudhary/ResumeSkills"
-    }
-  },
-  "footer": {
-    "socials": {
-      "github": "https://github.com/Paramchoudhary/ResumeSkills"
-    }
-  },
+  "primaryColor": "#2563EB",
+  "lightColor": "#EFF6FF",
+  "darkColor": "#1E40AF",
   "navigation": {
     "tabs": [
       {
@@ -86,5 +74,44 @@
         ]
       }
     ]
-  }
+  },
+  "keyFeatures": [
+    "20 specialized AI agent skills for resume and career tasks",
+    "ATS optimization with keyword analysis and compatibility checks",
+    "Achievement-focused bullet writing with metrics and impact statements",
+    "Job description matching and application strategy generation",
+    "Automated cover letter and LinkedIn profile optimization",
+    "Interview prep with STAR story generation from resume content",
+    "Salary negotiation research and counter-offer scripting",
+    "Support for specialized roles: tech, executive, academic, creative, career changers",
+    "CLI installation via npx skills command",
+    "Compatible with Cursor, Claude Code, Windsurf, Codex, Gemini CLI, and 30+ AI agents"
+  ],
+  "publicApiSurface": [
+    "npx skills add Paramchoudhary/ResumeSkills",
+    "npx skills add Paramchoudhary/ResumeSkills -g -y",
+    "npx skills list",
+    "npx skills list --global",
+    "npx skills remove <skill-name>",
+    "resume-ats-optimizer",
+    "resume-bullet-writer",
+    "job-description-analyzer",
+    "resume-tailor",
+    "cover-letter-generator",
+    "linkedin-profile-optimizer",
+    "interview-prep-generator",
+    "salary-negotiation-prep",
+    "tech-resume-optimizer",
+    "executive-resume-writer",
+    "career-changer-translator",
+    "resume-quantifier",
+    "resume-formatter",
+    "portfolio-case-study-writer",
+    "academic-cv-builder",
+    "reference-list-builder",
+    "offer-comparison-analyzer",
+    "resume-version-manager",
+    "creative-portfolio-resume",
+    "resume-section-builder"
+  ]
 }

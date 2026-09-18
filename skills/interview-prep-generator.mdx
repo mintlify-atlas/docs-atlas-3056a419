@@ -1,0 +1,257 @@
+---
+title: "Interview Prep Generator: STAR Stories, Questions, and Talking Points"
+sidebarTitle: "Interview Prep"
+description: "Generate STAR stories from your resume, predict likely interview questions, create company-specific prep, and build a bank of questions to ask your interviewers."
+---
+
+Going into an interview unprepared means leaving your best stories untold. Most candidates can describe *what* they did on the job — very few can deliver a crisp, compelling story that proves they can do what the interviewer actually needs. The `interview-prep-generator` skill mines your resume for the strongest evidence in your experience, structures it into polished STAR stories, predicts the behavioral and technical questions most likely to come up for your specific role, and builds you a complete prep package — all in minutes. You arrive at the interview knowing exactly which story answers which question, with a list of sharp questions ready to ask.
+
+## What Interview Prep Covers
+
+This skill generates a full, role-specific prep document from your resume and the job description:
+
+- **STAR story generation** — converts your resume bullets into structured Situation-Task-Action-Result narratives with concise and extended versions
+- **Role-specific behavioral question prediction** — identifies the competencies the company is most likely to probe based on the job description and maps questions to your best stories
+- **Technical question prep for technical roles** — generates likely system design, coding, and domain-knowledge questions for engineering, PM, data, and adjacent roles
+- **Talking points for each major resume bullet** — so you never blank on a bullet you listed but haven't thought about deeply
+- **Company research integration** — weaves in the company's mission, recent product launches, press coverage, and culture signals so your answers reference real context
+- **Questions to ask your interviewers** — 10 thoughtful, role-calibrated questions that signal curiosity, strategic thinking, and genuine interest — sorted by interviewer type
+
+## The STAR Framework
+
+STAR is a storytelling structure, not a fill-in-the-blank form. The goal is a story that feels natural when spoken aloud and lands with clear evidence of impact. Each component has a specific job to do:
+
+<Accordion title="Situation — Set the stakes">
+  The Situation gives your story context and establishes why this moment mattered. It should be 1–2 sentences that orient the listener and create tension: what was at risk, what was broken, or what opportunity existed.
+
+  **Weak:** "I was working on a product launch."
+
+  **Strong:** "We were six weeks from a major product launch when our lead engineer unexpectedly resigned. We had feature parity commitments to three enterprise customers and a public announcement on the calendar."
+
+  The difference is stakes. Without stakes, there's no reason to keep listening.
+</Accordion>
+
+<Accordion title="Task — Define your specific ownership">
+  The Task clarifies exactly what *you* were responsible for — not what the team did, not what your manager wanted, but the specific thing that landed on your shoulders. One clear sentence.
+
+  **Weak:** "The team needed to figure out what to do."
+
+  **Strong:** "I was tasked with both backfilling the engineering role and maintaining the original launch timeline — two things most people assumed couldn't both happen."
+
+  Specificity here distinguishes individual contributors from bystanders.
+</Accordion>
+
+<Accordion title="Action — Show your thinking and execution">
+  The Action is the core of the story. Interviewers use this section to evaluate how you think, how you operate, and whether your instincts are reliable. Use 3–4 concrete steps, each starting with "I" — not "we." Own what you did.
+
+  **Weak:** "We worked hard and figured it out."
+
+  **Strong:**
+  - I immediately ran a scope review to identify which features were critical-path vs. nice-to-have
+  - I partnered with our recruiting firm on an accelerated pipeline, shortlisting candidates within 72 hours
+  - I negotiated with our two most flexible enterprise customers to accept a phased rollout, removing the blocker from the critical path
+  - I held daily 15-minute standups with the remaining engineering team to surface blockers before they compounded
+
+  Four concrete moves. Each one demonstrates a different capability: prioritization, bias to action, stakeholder management, and operational discipline.
+</Accordion>
+
+<Accordion title="Result — Quantify the outcome">
+  The Result is your proof. Wherever possible, use numbers. If exact figures aren't available, use approximations ("roughly," "around") or relative comparisons ("25% faster than the previous release"). End with business impact, not just activity completion.
+
+  **Weak:** "We launched on time."
+
+  **Strong:** "We launched on schedule, shipped all six planned features, and closed two of the three enterprise deals within 30 days. I hired two engineers in three weeks — the fastest hire in our team's history. The launch was cited in the company all-hands as the quarter's biggest execution win."
+
+  Numbers make results real. Outcomes make results meaningful.
+</Accordion>
+
+## Trigger Phrases
+
+Use any of these prompts to activate the skill. Paste your resume and the job description in the same message for the most complete output:
+
+```text
+"Help me prep for my interview at [Company]"
+"Generate STAR stories from my resume"
+"What questions will they ask for a [Role] position?"
+"Help me prepare for a behavioral interview"
+"Prep me for an interview at Google for a PM role"
+"Create a story bank from my experience"
+"What should I say when they ask about a time I failed?"
+```
+
+## Interview Prep Workflow
+
+<Steps>
+  <Step title="Provide your resume and job description">
+    Paste both documents into the chat. The more complete your input, the more targeted the output. If you have notes on the company (recent news, the hiring manager's background, products you've used), include those too — they feed the company research section and help calibrate which stories to lead with.
+  </Step>
+  <Step title="Skill generates 5–8 STAR stories from your strongest bullets">
+    The skill scans your resume for bullets with implicit stories — quantified results, cross-functional projects, leadership moments, recoveries from setbacks — and expands each into a full STAR narrative. Each story comes in two lengths: a 90-second full version for open behavioral questions, and a 45-second short version for follow-up questions or when you need to be more concise. Stories are tagged by the competencies they demonstrate (e.g., "Leadership / Decision-making / Bias to action") so you can retrieve the right one quickly.
+  </Step>
+  <Step title="Predicts 10–15 likely behavioral questions">
+    The skill reads the job description for competency signals — phrases like "leads cross-functional teams," "thrives in ambiguity," "drives alignment without authority," and "owns the full product lifecycle" — and translates them into the behavioral questions an interviewer would actually ask. Each predicted question is ranked by likelihood: high, medium, or stretch.
+  </Step>
+  <Step title="Maps each question to your best STAR story">
+    Every predicted question is paired with the most relevant STAR story from your bank, including a note on which angle to emphasize. If a question has no strong matching story, the skill flags the gap and suggests which real experience could be stretched to cover it with honest framing.
+  </Step>
+  <Step title="Generates role-specific technical questions (if applicable)">
+    For engineering, data, product, and other technical roles, the skill generates a separate set of likely technical questions based on the technologies and methodologies listed in the job description. For PM roles, this includes product sense questions and estimation problems. For engineering roles, this covers system design prompts and language-specific questions. Each question is paired with a suggested framework for answering it.
+  </Step>
+  <Step title="Builds a list of 10 questions for you to ask">
+    The final section of your prep document contains 10 thoughtful questions tailored to the company, role, and interviewer type (hiring manager, team member, or executive). Questions are designed to demonstrate that you've done your research, that you think about the role strategically, and that you're evaluating fit — not just trying to get the job. The skill flags which questions are most likely to create memorable moments in the interview.
+  </Step>
+</Steps>
+
+## Behavioral Question Categories
+
+Interviewers draw behavioral questions from a consistent set of competency areas. The skill generates questions and maps stories across all of them:
+
+<Accordion title="Leadership and influence">
+  Interviewers want evidence that you can move people and projects forward, especially in situations where your authority wasn't formal. Expect questions like "Tell me about a time you led without a title" or "Describe a situation where you had to get buy-in from people who didn't report to you."
+
+  Your STAR stories for this category should highlight how you identified the right stakeholders, what approach you took to align them, and what happened as a result of your influence. Concrete details about *how* you built consensus — not just that you did — are what interviewers remember.
+</Accordion>
+
+<Accordion title="Conflict resolution">
+  This category probes emotional intelligence, composure under tension, and your ability to find workable solutions when people disagree. Common prompts: "Tell me about a time you had a significant conflict with a colleague or manager" and "How do you handle it when someone pushes back hard on your recommendation?"
+
+  The best answers in this category acknowledge the other person's perspective genuinely — not performatively — and show a resolution that maintained the working relationship. Interviewers are watching for maturity and self-awareness.
+</Accordion>
+
+<Accordion title="Failure and lessons learned">
+  Every strong interviewer asks some version of this. "Tell me about your biggest professional mistake" or "Describe a project that didn't go as planned." The goal isn't to hear about failure — it's to evaluate whether you're self-aware, whether you learn, and whether you apply those lessons.
+
+  The answer must be a real failure, not a humble brag ("I just work too hard"). Own the mistake cleanly, explain what you learned, and then give one concrete example of how you applied that learning. The application of the lesson is what actually earns the point.
+</Accordion>
+
+<Accordion title="Cross-functional collaboration">
+  Modern roles require working with people who have different incentives, vocabularies, and definitions of success. Interviewers want to know if you can operate effectively across those boundaries. Expect: "Tell me about a complex cross-functional project" or "Describe a time when you had to work with a team that had very different priorities from yours."
+
+  Strong answers name the specific teams involved, describe the alignment challenge concretely, and show how you created shared context or found common ground on trade-offs.
+</Accordion>
+
+<Accordion title="Time management under pressure">
+  "Tell me about a time you had too much on your plate" or "Describe a situation where you had a hard deadline and things weren't on track." This tests prioritization logic, delegation judgment, and whether you communicate proactively when things get tight.
+
+  The best answers show a clear framework: how you assessed what mattered most, what you cut or delegated, and how you communicated with stakeholders before the deadline — not after.
+</Accordion>
+
+<Accordion title="Innovation and problem-solving">
+  "Tell me about a time you identified and solved a problem that no one else had noticed" or "Describe a creative solution you came up with under constraints." This evaluates intellectual curiosity, resourcefulness, and initiative.
+
+  Quantify the impact wherever possible. A story about cutting a manual process from 8 hours to 20 minutes is far more compelling than "I streamlined our workflow." Let the outcome speak.
+</Accordion>
+
+## Example STAR Story: Before and After
+
+To illustrate how a resume bullet transforms into an interview-ready story, here's a real example the skill produces:
+
+**Resume bullet (input):**
+> "Led cross-functional initiative to reduce customer onboarding time by 40%"
+
+**STAR story (skill output):**
+
+```text
+SITUATION:
+When I joined, customer onboarding took an average of 18 days — nearly three 
+weeks from signed contract to active user. We were losing 12% of new customers 
+during that window, and our CSM team was spending more time chasing internal 
+approvals than actually helping customers succeed.
+
+TASK:
+I was asked to own the onboarding redesign end-to-end: diagnose the bottlenecks,
+build alignment across product, engineering, and operations, and ship a new process.
+
+ACTION:
+I started by shadowing five full onboarding cycles to see the friction points 
+firsthand. I mapped every handoff in the process and found three places where 
+work sat idle for 3+ days waiting for approvals that could be pre-authorized.
+I then ran a working session with the heads of product, engineering, and ops to 
+walk through the map — most of them had never seen the full picture before.
+We agreed on a 90-day sprint with weekly accountability check-ins. I personally 
+owned the approval workflow redesign and wrote the new runbook that replaced 
+six different Slack threads.
+
+RESULT:
+We reduced average onboarding time from 18 days to 11 days — a 39% improvement.
+Early customer drop-off during onboarding fell from 12% to 5%. CSM capacity freed 
+up enough that we were able to take on 15% more accounts without adding headcount.
+The model we built has since been adopted by two other product teams.
+```
+
+**Short version (45-second follow-up):**
+
+```text
+"We had an 18-day onboarding process that was causing 12% of new customers to 
+churn before they even got started. I led a cross-functional sprint — diagnosed 
+the bottlenecks by shadowing actual onboardings, built alignment with product, 
+engineering, and ops, and redesigned the approval workflow. We cut time to value 
+from 18 to 11 days and reduced early churn by more than half."
+```
+
+## Questions to Ask Your Interviewers
+
+The skill generates tailored questions based on who you're meeting with. Here are the categories and example questions it produces:
+
+<CardGroup cols={2}>
+  <Card title="For Your Hiring Manager" icon="user-tie">
+    - "What does success look like in this role at 30, 60, and 90 days?"
+    - "What's the biggest unsolved challenge this team is facing right now?"
+    - "How do you typically give feedback, and how often?"
+    - "What would make someone thrive in this team's culture — and what would make them struggle?"
+  </Card>
+  <Card title="For Team Members" icon="users">
+    - "What's a typical week like for someone in this role?"
+    - "What do you wish you'd known before joining the team?"
+    - "How do you collaborate with other functions — product, eng, marketing?"
+    - "What's one thing you'd change about how the team operates if you could?"
+  </Card>
+  <Card title="For Executives" icon="building">
+    - "How does this team's work connect to the company's top priorities for the year?"
+    - "What's your theory for how this company wins in the next three years?"
+    - "What keeps you excited about where the company is headed?"
+  </Card>
+  <Card title="Questions to Avoid" icon="ban">
+    - ❌ Anything easily answered by the company's homepage
+    - ❌ Questions about salary, PTO, or benefits (ask HR separately)
+    - ❌ Yes/no questions — always ask open-ended
+    - ❌ Questions that imply the company has a problem ("I heard layoffs were rough — how is morale?")
+  </Card>
+</CardGroup>
+
+## Handling the Hardest Questions
+
+Some questions trip up even experienced candidates. The skill generates specific prep for these:
+
+**"What's your greatest weakness?"**
+The formula is: *real weakness + self-awareness + concrete improvement steps*. Don't give a strength disguised as a weakness. Interviewers have heard "I work too hard" ten thousand times and it signals poor self-awareness, which is worse than having a weakness.
+
+```text
+"I can get very deep into the details of a problem when I think precision matters,
+which occasionally slows me down on things where speed matters more. I've been 
+working on this deliberately — I now set explicit time-boxes on research and 
+analysis tasks, and I've gotten better at asking 'does this actually need to be 
+perfect, or does it just need to be done?' My manager has noticed the change."
+```
+
+**"Tell me about yourself."**
+This is a 90-second pitch, not a resume walkthrough. Structure: where you've been → what you've built expertise in → why this role, specifically. End with something that creates a hook for the conversation.
+
+**"Why are you leaving your current job?"**
+Always answer this with forward motion, never complaint. You're not running *from* anything — you're running *toward* something specific that this role offers. Name what that thing is.
+
+<Tip>
+  Practice saying your STAR stories out loud — reading them is very different from delivering them naturally in an interview. Record yourself once on your phone and listen back. You'll immediately hear where you're rushing, losing the thread, or burying the result.
+</Tip>
+
+## Best Practices
+
+- **Build a bank of 8–10 stories, not 3–4.** You want flexibility. Some stories work for multiple question types; having extras means you can pick the strongest fit in the moment rather than forcing a mediocre story into a question it barely answers.
+
+- **Know your stories, don't memorize them.** Memorized answers sound rehearsed. Know the skeleton — situation, task, key actions, result — and let the words be natural each time. The details stay consistent; the phrasing varies.
+
+- **Send a thank-you note within 24 hours.** Reference something specific from the conversation — a question they asked, a problem they mentioned, a detail about the team. Generic thank-you notes are worse than none.
+
+- **Research the interviewer before the call.** A quick look at their LinkedIn profile often reveals what they worked on before joining the company, what they care about, and how long they've been there. This context shapes which stories to emphasize and which questions to ask.
+
+- **Prep for the "tell me about yourself" opener every single time.** It's the question you'll always get, and most people still fumble it because they assume they'll just riff. Write it out and practice it once before every interview.

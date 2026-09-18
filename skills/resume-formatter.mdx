@@ -1,0 +1,188 @@
+---
+title: "Resume Formatter: ATS-Friendly Layouts and Clean Structure"
+sidebarTitle: "Formatter"
+description: "Ensure your resume uses clean, ATS-compatible formatting — standardized sections, consistent spacing, readable fonts, and scannable layouts that work for both humans and automated systems."
+---
+
+Formatting mistakes sink otherwise strong resumes in two distinct ways: automated systems misparse or discard them before a human ever reads them, and the humans who do read them bounce off cluttered, inconsistent layouts within the first 10 seconds. A two-column design with decorative fonts might look polished in a PDF viewer but render as scrambled text in an ATS. Excessive margins might make a one-page resume look "clean" but signal to a recruiter that you don't have enough substance to fill the space. The `resume-formatter` skill audits and corrects both failure modes — producing a layout that passes machine parsing and impresses a human reader who spends 6–10 seconds on a first scan.
+
+## What Gets Formatted
+
+The skill reviews and corrects every dimension of resume layout:
+
+- **Section headers** — standardized to ATS-recognized names and consistent visual treatment (bold, caps, or underline — one style, everywhere)
+- **Date formats** — unified across all entries (`Jan 2022` or `01/2022`, applied consistently throughout)
+- **Bullet style** — standardized to simple `•`, `-`, or `*` symbols; decorative markers removed
+- **Whitespace and spacing** — appropriate section gaps (12–16pt between sections), line spacing (1.0–1.15), and space after bullets
+- **Font recommendations** — ATS-safe family selection (Arial, Calibri, Georgia, or Times New Roman) with correct size hierarchy
+- **Margin guidelines** — 0.5"–1" on all sides; the skill flags margins that are too tight (cramped) or too generous (wastes space)
+- **Length targets** — 1 page for under 10 years of experience; 2 pages for 10 or more years; the skill advises on what to cut or expand to hit the right length
+- **File format and naming** — `.docx` or text-based `.pdf`; filename in `FirstName_LastName_Resume.pdf` convention
+
+## ATS vs. Human Readability
+
+Your resume has two audiences with very different needs, and you have to satisfy both simultaneously.
+
+**The ATS reads your resume as raw text.** It doesn't see fonts, columns, or visual hierarchy — it parses a stream of characters and tries to assign them to structured fields: name, contact, job titles, companies, dates, skills. Anything that disrupts that parsing (tables, text boxes, multi-column layouts, headers/footers, embedded images) causes sections to be misread, merged, or skipped entirely. A beautiful two-column resume may arrive in an ATS as a single column where your contact information is mixed in with your work history.
+
+**The human reader scans in about 6–10 seconds.** Eye-tracking research shows recruiters follow a predictable F-pattern: they read the top of the resume (your name and summary), then scan down the left margin looking for job titles and companies, then read right on entries that catch their interest. Visual hierarchy — larger name, clear section headers, bolded job titles — guides that scan. Inconsistent formatting forces them to work harder than they should; clean formatting makes them want to keep reading.
+
+**The solution that satisfies both:** a single-column layout with standard fonts, clear section headers using familiar labels, and consistent visual hierarchy created purely through font size, weight, and spacing — no design elements that break ATS parsing.
+
+## Standard Section Order
+
+The order of sections on your resume signals priority to both the ATS and the human reader. Place your strongest material closest to the top.
+
+1. **Summary / Objective** — a 2–4 sentence overview of your value proposition; include if you have a clear narrative to tell or are making a career transition
+2. **Work Experience** — the core of most resumes; use reverse-chronological order (most recent role first)
+3. **Education** — moves above Work Experience for recent graduates or when a degree is a strict requirement
+4. **Skills** — hard skills, tools, technologies, certifications; placed after Experience for most mid-career and senior professionals
+5. **Certifications** — listed separately from Skills when certifications are numerous or particularly relevant
+6. **Projects** — optional; valuable for technical candidates, recent graduates, or career changers showing new skills
+7. **Volunteer / Affiliations** — optional; include when roles show leadership or directly relevant experience
+
+<Tip>
+  Use reverse-chronological order within every section — most recent first. This is what ATS systems expect when parsing dates, and it's what human readers prefer since they want to see your most relevant, recent experience immediately.
+</Tip>
+
+## Trigger Phrases
+
+```text
+"Format my resume"
+"Fix my resume layout"
+"Make my resume ATS-friendly"
+"My resume looks messy — can you clean it up?"
+"What's wrong with my resume formatting?"
+"Standardize my resume sections"
+"Review my resume for formatting issues"
+"Is my resume layout correct?"
+```
+
+## Font and Spacing Reference
+
+<CardGroup cols={2}>
+  <Card title="Safe Fonts for ATS" icon="font">
+    **Sans-serif:** Arial, Calibri, Helvetica, Verdana
+
+    **Serif:** Times New Roman, Georgia, Garamond
+
+    Avoid: decorative fonts, custom typefaces, or any font not installed by default on Windows and macOS
+  </Card>
+  <Card title="Font Size Hierarchy" icon="text-size">
+    **Name:** 16–20pt
+
+    **Section headers:** 12–14pt
+
+    **Job titles / company names:** 11–12pt (bold)
+
+    **Body text and bullets:** 10–12pt
+
+    **Minimum readable:** 10pt
+  </Card>
+  <Card title="Margins and Spacing" icon="align-left">
+    **Margins:** 0.5" minimum, 1" maximum
+
+    **Line spacing:** 1.0–1.15
+
+    **Between sections:** 12–16pt gap
+
+    **After paragraph/header:** 6–12pt
+  </Card>
+  <Card title="Page Length" icon="file">
+    **0–9 years experience:** 1 page
+
+    **10–20 years experience:** 1–2 pages
+
+    **20+ years / executive:** 2 pages (3 max for executives with board roles)
+  </Card>
+</CardGroup>
+
+## ATS Formatting Rules
+
+<Steps>
+  <Step title="Single-Column Layout Only">
+    Multi-column designs are the most common ATS failure point. Even a simple two-column layout — left column for contact/skills, right column for experience — will be parsed as two merged text streams by most ATS platforms. Convert everything to a single, left-aligned column. Visual separation between sections comes from whitespace and headers, not columns.
+  </Step>
+  <Step title="Remove All Tables and Text Boxes">
+    Tables and text boxes are invisible or garbled in ATS parsing. This includes tables used for contact information layouts, skill grids, and any multi-cell designs. Replace all tables with plain text using line breaks and tabs for spacing. Replace text boxes with regular paragraphs.
+  </Step>
+  <Step title="Move Contact Info to the Document Body">
+    Information in document headers and footers is skipped by the majority of ATS systems. Your name, email, phone, LinkedIn URL, and city/state must appear in the body of the document — in the first few lines, before any section headers. This is the single most common formatting mistake the skill catches.
+  </Step>
+  <Step title="Standardize Section Header Names">
+    ATS systems look for specific strings when assigning parsed content to fields. Replace creative headers with recognized standards:
+
+    | ❌ Avoid | ✅ Use Instead |
+    |---|---|
+    | My Journey | Work Experience |
+    | What I Bring | Skills |
+    | Academic Background | Education |
+    | Where I've Worked | Professional Experience |
+    | Career Highlights | Summary |
+  </Step>
+  <Step title="Remove Images, Graphics, and Skill Bars">
+    Profile photos, company logos, skill-level bars, progress indicators, and decorative icons cannot be parsed by ATS and often cause surrounding text to be misread. Remove all non-text elements. Skill proficiency can be communicated through categorization ("Advanced," "Proficient") or simply by listing skills without levels.
+  </Step>
+  <Step title="Standardize Bullets and Dates">
+    Use the same bullet symbol throughout (`•` is the most ATS-safe). Use the same date format throughout — either `Jan 2020` or `01/2020`, never both. Write employment dates as `Month Year – Month Year` or `Month Year – Present`. Inconsistent date formats cause parsing errors in chronological sorting.
+  </Step>
+</Steps>
+
+## Experience Entry Format
+
+Each role in your Work Experience section should follow this consistent structure:
+
+```text
+COMPANY NAME | City, State
+Job Title | Month Year – Month Year
+
+• Achievement bullet with metric and impact
+• Achievement bullet with metric and impact
+• Achievement bullet with metric and impact
+```
+
+**Guidelines by role age:**
+- **Current or most recent role:** 4–6 bullets
+- **Roles from 2–5 years ago:** 3–4 bullets
+- **Roles 5+ years ago:** 2–3 bullets (unless highly relevant)
+- **Roles 10+ years ago:** title, company, dates only (optional bullets if seminal)
+
+## Skills Section Formats
+
+```text
+Option 1 — Simple list (best ATS compatibility):
+SKILLS
+Python, SQL, JavaScript, React, AWS, Docker, Git, Agile, Jira, Tableau
+
+Option 2 — Categorized (good for technical roles):
+TECHNICAL SKILLS
+Languages: Python, JavaScript, TypeScript, SQL
+Cloud & Infra: AWS (EC2, S3, Lambda), Docker, Kubernetes
+Tools: Git, Jira, Confluence, Datadog
+```
+
+Note: multi-column skill layouts (three columns of tools) are visually efficient but can trip some ATS parsers. If you're applying through an ATS portal rather than directly to a recruiter, use Option 1 or Option 2.
+
+## Contact Information Format
+
+```text
+JANE DOE
+jane.doe@email.com | (415) 555-0198 | linkedin.com/in/janedoe
+San Francisco, CA
+```
+
+**Include:** full name, professional email, phone, city and state, LinkedIn URL, portfolio or GitHub (for relevant roles).
+
+**Exclude:** full street address (city/state is sufficient and safer for privacy), date of birth, marital status, photo, and personal social media accounts.
+
+## File Naming Convention
+
+```text
+✅  JaneDoe_Resume.pdf
+✅  JaneDoe_Resume_ProductManager.pdf
+❌  resume_final_FINAL_v3_updated.docx
+❌  Resume (1).pdf
+❌  Untitled document.docx
+```
+
+Recruiters receive hundreds of files named "resume.pdf." A properly named file is a small but real signal of professionalism, and it prevents your file from being overwritten by another applicant's submission in shared folders.

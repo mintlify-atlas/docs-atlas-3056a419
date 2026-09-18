@@ -1,0 +1,158 @@
+---
+title: "Install ResumeSkills for Your AI Assistant"
+sidebarTitle: "Installation"
+description: "Three ways to install ResumeSkills: CLI via npx, manual git clone, or direct download of individual skill files. Supports global and per-project installs."
+---
+
+ResumeSkills supports three installation methods so you can choose the approach that best fits your setup. The **CLI install** is the fastest path — one command installs all 20 skills globally via `npx`. The **manual install** is ideal if you prefer to manage files directly or work in an environment without npm access. The **direct download** option lets you pick individual skill files if you only need a subset of the collection. All three methods produce the same result: skill files in your AI agent's skills directory, ready to use immediately.
+
+<Warning>
+  Global installs (`-g`) make all 20 skills available across every project and directory on your machine. Per-project installs (without `-g`) only activate skills when you're working inside that specific project directory. Use global for the best experience unless you have a reason to scope skills to a single project.
+</Warning>
+
+## Installation Methods
+
+<Tabs>
+  <Tab title="CLI Install (Recommended)">
+    The CLI install uses `npx skills` to fetch and install all 20 ResumeSkills in a single command. No cloning, no copying files — just one line.
+
+    **Global install** (recommended — available everywhere):
+
+    ```bash
+    npx skills add Paramchoudhary/ResumeSkills -g -y
+    ```
+
+    **Per-project install** (active only in the current directory):
+
+    ```bash
+    npx skills add Paramchoudhary/ResumeSkills -y
+    ```
+
+    **Flag reference:**
+
+    | Flag | Meaning |
+    |------|---------|
+    | `-g` | Install globally so skills are available in every project on your machine |
+    | `-y` | Skip the confirmation prompt and install immediately |
+
+    After running either command, your AI assistant will have access to all 20 skills. No restart or configuration required — the skills are picked up automatically the next time you open a chat.
+  </Tab>
+
+  <Tab title="Manual Install">
+    If you prefer to manage files directly or don't have `npx` available, you can clone the repository and copy the skill files into your AI agent's skills directory manually.
+
+    **For Cursor:**
+
+    ```bash
+    # Clone the repository
+    git clone https://github.com/Paramchoudhary/ResumeSkills.git
+
+    # Create the Cursor skills directory if it doesn't exist
+    mkdir -p ~/.cursor/skills
+
+    # Copy all skill files
+    cp -r ResumeSkills/skills/* ~/.cursor/skills/
+    ```
+
+    **For Claude Code:**
+
+    ```bash
+    # Clone the repository
+    git clone https://github.com/Paramchoudhary/ResumeSkills.git
+
+    # Create the Claude Code skills directory if it doesn't exist
+    mkdir -p ~/.claude/skills
+
+    # Copy all skill files
+    cp -r ResumeSkills/skills/* ~/.claude/skills/
+    ```
+
+    **For other agents:**
+
+    ```bash
+    # Clone the repository
+    git clone https://github.com/Paramchoudhary/ResumeSkills.git
+
+    # Copy to the generic agents skills directory
+    mkdir -p ~/.agents/skills
+    cp -r ResumeSkills/skills/* ~/.agents/skills/
+    ```
+
+    Once the files are in place, the skills are immediately available. You can delete the cloned `ResumeSkills` directory afterward if you no longer need it.
+  </Tab>
+
+  <Tab title="Direct Download">
+    If you only need a few specific skills rather than the entire collection, you can download individual skill files directly from the repository's `/skills` directory.
+
+    1. Browse to the [ResumeSkills `/skills` directory on GitHub](https://github.com/Paramchoudhary/ResumeSkills/tree/main/skills)
+    2. Open the skill file you want (e.g., `resume-ats-optimizer.md`)
+    3. Click **Raw** to view the plain text, then save the file to your local machine
+    4. Move the downloaded file into your AI agent's skills directory:
+
+    ```bash
+    # Example: manually place a single skill for Claude Code
+    mv ~/Downloads/resume-ats-optimizer.md ~/.claude/skills/
+
+    # Example: manually place a single skill for Cursor
+    mv ~/Downloads/resume-ats-optimizer.md ~/.cursor/skills/
+    ```
+
+    Repeat for each skill file you want. This approach is useful when you want a minimal set of skills or when you're evaluating specific skills before installing the full collection.
+
+    <Tip>
+      The full collection is only 20 files. Unless you have a specific reason to be selective, the CLI install is faster even if you only plan to use a handful of skills — unused skills don't affect performance.
+    </Tip>
+  </Tab>
+</Tabs>
+
+## Managing Skills
+
+Once installed, you can inspect your skills at any time using the `npx skills` CLI:
+
+```bash
+# List skills installed in the current project
+npx skills list
+
+# List globally installed skills
+npx skills list --global
+```
+
+Both commands display the skill name, version, and installation path for each skill found.
+
+## Uninstalling Skills
+
+You can remove individual skills by name or wipe the entire ResumeSkills collection at once.
+
+**Remove individual skills by name:**
+
+```bash
+npx skills remove resume-ats-optimizer
+npx skills remove resume-bullet-writer
+```
+
+**Remove all ResumeSkills at once (manual cleanup):**
+
+```bash
+# Remove all resume-* skills from the generic agents directory
+rm -rf ~/.agents/skills/resume-*
+
+# Remove all resume-* skills from the Cursor directory
+rm -rf ~/.cursor/skills/resume-*
+```
+
+<Note>
+  The `rm -rf` commands above use the `resume-*` glob pattern, which matches all 20 skills in the collection since every skill name starts with `resume-` — except for `job-description-analyzer`, `cover-letter-generator`, `linkedin-profile-optimizer`, `interview-prep-generator`, `salary-negotiation-prep`, and `offer-comparison-analyzer`. To remove those as well, run `rm -rf ~/.agents/skills/` to clear the full skills directory, or remove each file individually.
+</Note>
+
+## Installation Paths by Agent
+
+Skills are stored in a different directory depending on which AI assistant you're using. The `npx skills` CLI detects the right location automatically, but if you're doing a manual install you'll need the correct path:
+
+| AI Agent | Global Skills Path |
+|----------|--------------------|
+| Claude Code | `~/.claude/skills/` |
+| Cursor | `~/.cursor/skills/` |
+| Windsurf | See Windsurf agent documentation |
+| Codex, Amp, Antigravity, Augment, others | `~/.agents/skills/` |
+
+If your agent isn't listed above, check its documentation for the configured skills or context directory — drop the skill files there and they'll be picked up automatically.

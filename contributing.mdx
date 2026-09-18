@@ -1,0 +1,103 @@
+---
+title: "Contributing to ResumeSkills: Improve and Extend the Skill Library"
+sidebarTitle: "Contributing"
+description: "How to improve existing ResumeSkills, create new skills for specialized use cases, report issues, and submit pull requests to the open-source repository."
+---
+
+ResumeSkills is MIT-licensed and actively welcomes contributions from the community. Whether you want to fix a typo in an existing skill, add industry-specific examples, create an entirely new skill for a specialized use case, or report a workflow that isn't working as expected — every contribution helps job seekers worldwide get better results from their AI-assisted job search. The library grows stronger with each improvement, and the process for contributing is designed to be lightweight and collaborative.
+
+## Ways to Contribute
+
+<CardGroup cols={2}>
+  <Card title="Improve Existing Skills" icon="pencil">
+    Fix typos, clarify confusing language, add industry-specific examples, strengthen frameworks and methodologies, cover additional edge cases, and update skills to reflect current job market trends.
+  </Card>
+  <Card title="Create New Skills" icon="sparkles">
+    Contribute skills for industry-specific resume optimization (healthcare, legal, nonprofit), role-specific workflows (sales, engineering specialties), international job search scenarios, specialized documents like bios and one-pagers, or career development topics like promotions and performance reviews.
+  </Card>
+  <Card title="Report Issues" icon="flag">
+    Open an issue when a skill isn't producing the expected output, contains outdated information that no longer reflects hiring practices, is missing important use cases, or has instructions that are unclear or ambiguous.
+  </Card>
+  <Card title="Review Pull Requests" icon="code-pull-request">
+    Help the project move faster by reviewing open pull requests. Test skills against real resumes, verify that examples are accurate, and give constructive feedback on new contributions from others in the community.
+  </Card>
+</CardGroup>
+
+## Contribution Guidelines
+
+High-quality skills have a direct impact on whether job seekers land interviews. The following guidelines exist to keep the library accurate, actionable, and genuinely useful.
+
+### Do
+
+- **Include specific, actionable instructions** — tell the AI agent exactly what to do, in what order, and to what standard.
+- **Provide real-world examples** — generic advice is not enough; use realistic resume content that reflects actual job titles and industries.
+- **Show before/after transformations** — demonstrate concretely how the skill changes weak input into strong output.
+- **Include checklists and frameworks** — structured QA checklists and named methodologies (CAR, STAR, etc.) make skills far more reliable.
+- **Test your skill with actual resumes** — run your skill against several real resume samples before submitting to verify it produces consistent, high-quality results.
+
+### Don't
+
+- **Be vague or generic** — instructions like "improve the resume" give the AI nothing actionable to work with.
+- **Copy copyrighted content** — do not reproduce frameworks, templates, or text from proprietary sources without permission.
+- **Include outdated practices** — the job market evolves; skills should reflect current hiring standards and ATS behavior.
+- **Make unsubstantiated claims** — avoid asserting specific statistics or outcomes you cannot verify.
+- **Ignore ATS compatibility** — any skill that touches resume formatting or content should account for how Applicant Tracking Systems parse the output.
+
+## Submission Process
+
+<Steps>
+  <Step title="Small Changes: Typos and Minor Improvements">
+    For small fixes — typos, grammar corrections, clarifying a confusing sentence, or updating a single example — the process is simple:
+
+    1. Fork the [ResumeSkills repository](https://github.com/Paramchoudhary/ResumeSkills) on GitHub.
+    2. Make your change directly in the relevant skill file inside `/skills/`.
+    3. Submit a pull request with a clear, concise description of what you changed and why.
+
+    Maintainers review small fixes quickly, often within a few days.
+  </Step>
+  <Step title="New Skills: Open an Issue First">
+    Before investing time building a new skill, open a GitHub issue to discuss your idea. This step prevents duplicate work and helps you get early feedback on scope and direction.
+
+    1. **Open an issue** describing the skill you want to create — what problem it solves, who it's for, and what gap it fills in the current library.
+    2. **Get feedback from maintainers** and refine the concept based on their input.
+    3. **Fork the repository** and create your skill file inside `/skills/` following the required [skill file format](/skill-format).
+    4. **Test thoroughly** against several real or realistic resumes to verify the skill produces consistently strong output.
+    5. **Submit a pull request** with the completed skill and supporting context.
+  </Step>
+</Steps>
+
+## PR Requirements
+
+A well-structured pull request makes review faster and increases the likelihood of your contribution being merged. Every PR should include the following:
+
+<Note>
+  PRs that are missing testing evidence or do not follow the skill file format will be asked to revise before merging.
+</Note>
+
+| Field | Requirement |
+|-------|-------------|
+| **Title** | Clear and descriptive — e.g., `Add healthcare-resume-optimizer skill` or `Fix edge case in resume-bullet-writer` |
+| **Description** | Explain *what* you changed and *why* — what problem this solves or what gap it fills |
+| **Testing** | Describe how you tested the skill — what resumes you used, what outputs you observed |
+| **Sample inputs/outputs** | For new skills, include at least one realistic before/after example showing the skill in action |
+
+Example PR title format:
+
+```
+Add healthcare-resume-optimizer skill
+Improve before/after examples in resume-quantifier
+Fix outdated ATS keyword guidance in resume-ats-optimizer
+```
+
+## Code of Conduct
+
+ResumeSkills is a community project built around a shared goal: helping job seekers succeed. All contributors are expected to:
+
+- **Be respectful and constructive** in issues, pull requests, and discussions — critique ideas, not people.
+- **Focus on helping job seekers** — every decision should serve the end user who is trying to land a job.
+- **Provide honest, accurate information** — do not exaggerate outcomes or include guidance you haven't verified.
+- **Credit sources when applicable** — if a framework or methodology comes from a specific source, acknowledge it.
+
+<Tip>
+  Have a question that doesn't fit neatly into an issue or PR? Open a GitHub issue with the `question` label and the maintainers will help point you in the right direction.
+</Tip>

@@ -1,0 +1,213 @@
+---
+title: "Resume Tailor: Customize Your Resume for Every Job Application"
+sidebarTitle: "Resume Tailor"
+description: "Customize your resume for a specific job posting by reordering bullets, swapping in job-specific keywords, and emphasizing the most relevant experience — without fabricating anything."
+---
+
+Generic resumes get generic results. This skill rewrites your resume to speak directly to a specific job posting, using the exact language from the job description while keeping everything truthful. Recruiters spend an average of six seconds scanning a resume before deciding whether to continue reading — a tailored resume puts your most relevant experience in those first six seconds, in the vocabulary the hiring team is already looking for. The `resume-tailor` skill automates that translation so every application you send is purpose-built for the role you're actually targeting.
+
+## What Gets Tailored
+
+Tailoring is more than inserting a few keywords. The skill adjusts every section of your resume to align with the specific opportunity:
+
+- **Summary statement** — rewritten to mirror the role's title, core function, and top-priority requirements in your own voice
+- **Bullet prioritization** — the most relevant achievements in each role are moved to the top; less relevant ones are deprioritized or cut for space
+- **Keyword alignment** — terminology from the job description is matched exactly where it accurately describes your experience (e.g., if the JD says "stakeholder management" and your bullet says "worked with various teams," the language is updated to match)
+- **Skills section reordering** — skills that appear most frequently in the job description are listed first, signaling immediate relevance to both ATS systems and human reviewers
+- **Achievement emphasis** — bullets that demonstrate quantified impact aligned to what this employer cares about are surfaced and strengthened; generic duty-lists are trimmed
+
+## Truthfulness Constraint
+
+The skill never fabricates experience. It reframes, reorders, and rewords — using your actual history to best match what the employer wants. This is a firm constraint, not a suggestion.
+
+Think of your full career history as a library. Every project, achievement, and responsibility you've ever held is a book on the shelf. Tailoring means selecting the books most relevant to what this employer is looking for and displaying them at eye level — not writing new books that don't exist.
+
+The line between acceptable tailoring and fabrication is clear:
+
+**Acceptable tailoring** includes reordering true information, emphasizing relevant experience over unrelated experience, adopting industry-standard terminology that accurately describes your work, adding context to vague bullet statements, and mirroring the JD's phrasing when it honestly describes what you did.
+
+**Fabrication** — which this skill explicitly refuses — includes adding skills you don't have, inventing projects or responsibilities, changing numbers or metrics, claiming titles or certifications you didn't hold, and writing bullets that imply experience that doesn't exist in your history.
+
+If a required skill is genuinely missing from your background, the skill will flag the gap clearly rather than manufacture a claim. Those gaps belong in your cover letter with an honest framing, not buried in experience bullets.
+
+## Trigger Phrases
+
+Use any of the following prompts to start the tailoring workflow. Providing both your resume and the target job description in the same message yields the most complete output:
+
+```text
+"Tailor my resume for this job" + paste resume + JD
+"Customize my resume for this role" + paste resume + JD
+"Optimize my resume for this job posting" + paste JD
+"Update my resume to match this job description"
+"What changes should I make to my resume for this role?" + paste JD
+"Rewrite my resume summary for this position"
+"Which bullets should I lead with for this job?" + paste JD
+```
+
+## Tailoring Workflow
+
+<Steps>
+  <Step title="Provide Your Resume and the Job Description">
+    Paste your current resume and the full job description into the same message. The more complete your input, the more targeted the output. If you've already run the `job-description-analyzer` skill on this posting, share the match score report as well — it gives the tailoring process a head start on which gaps to address and which strengths to amplify.
+  </Step>
+  <Step title="Keyword and Requirement Extraction">
+    The skill parses the job description to extract required keywords (tools, methodologies, domain terms, certifications), preferred keywords, recurring phrases that signal cultural priorities, and the job title's standard vocabulary. Each keyword is flagged with a priority level based on how many times it appears in the JD and whether it sits under required or preferred qualifications. A keyword appearing five times is treated as a core theme — it should appear in your summary, skills section, and at least one experience bullet.
+  </Step>
+  <Step title="Experience Mapping">
+    Every requirement extracted in Step 2 is mapped to the closest matching experience in your resume. The skill identifies where each keyword already appears (exact match, synonym, or implied by context) and where it is missing entirely. For missing keywords that your experience genuinely supports — for example, you led cross-functional meetings but your bullet says "collaborated with teams" — the gap is flagged as a rewording opportunity rather than a true absence.
+  </Step>
+  <Step title="Summary Rewrite">
+    Your professional summary is rewritten to position you specifically for this role. The new summary opens with the job's actual title (or closest match to your level), incorporates the top two to three requirements from the posting, and closes with a quantified achievement or credential most relevant to this employer. The tone and style stay consistent with your voice — the goal is alignment, not a different person.
+  </Step>
+  <Step title="Bullet Reordering by Relevance">
+    Within each job on your resume, bullets are reordered so the most relevant achievements appear first. For a management role, team leadership and budget ownership bullets move to the top. For a technical role, architecture decisions and engineering metrics lead. For a cross-functional role, stakeholder coordination and project delivery bullets surface first. Bullets with no relevance to the target role are deprioritized to the bottom of the list or removed entirely if space is tight — they stay in your master resume.
+  </Step>
+  <Step title="Skills Section Adjustment">
+    The skills section is reordered so skills that appear most prominently in the job description lead the list. If the JD mentions SQL five times, SQL appears first in your technical skills. If skills that appear in the JD are missing from your skills section but genuinely present in your experience, they are added. Skills that are not relevant to this specific role — but that you do have — may be moved lower or removed for this version to reduce noise.
+  </Step>
+  <Step title="Tailored Version Delivered">
+    The complete tailored resume is produced alongside a change log that documents every modification: which bullets were moved, which phrases were updated, which keywords were added, and the estimated new match score for this posting. The change log doubles as interview prep — knowing what you changed and why helps you speak to those exact points when a recruiter or hiring manager asks about them.
+  </Step>
+</Steps>
+
+## Section-by-Section Tailoring Examples
+
+### Professional Summary
+
+The summary is the highest-leverage tailoring target — it's the first thing a recruiter reads and should mirror the job's core requirements directly.
+
+**Before (generic):**
+```text
+Results-driven professional with 5 years of experience in business
+operations. Strong analytical and communication skills. Looking for
+a challenging opportunity to grow my career.
+```
+
+**After (tailored for an Operations Manager role):**
+```text
+Operations Manager with 5 years optimizing supply chain processes
+and driving cost reductions of up to 25%. Deep expertise in Lean
+Six Sigma, vendor management, and cross-functional team leadership.
+Consistent track record of improving operational efficiency while
+maintaining quality and compliance standards.
+```
+
+**After (same person, tailored for a Project Manager role):**
+```text
+PMP-certified Project Manager with 5 years leading cross-functional
+initiatives from scope through delivery. Expertise in Agile
+methodology, stakeholder alignment, and budget oversight across
+$10M+ portfolios. Track record of on-time, under-budget delivery
+with zero critical escalations.
+```
+
+### Skills Section Reordering
+
+**Job description emphasizes:** Data analysis, SQL, Python, stakeholder communication, Tableau
+
+**Before (generic ordering):**
+```text
+Skills: Microsoft Office, Communication, Project Management,
+Python, SQL, Data Visualization, Leadership, Stakeholder Relations
+```
+
+**After (tailored ordering):**
+```text
+Skills: SQL, Python, Data Analysis, Tableau (Data Visualization),
+Stakeholder Communication, Project Management, Microsoft Office
+```
+
+### Experience Bullet Reordering
+
+The same role can read very differently depending on which bullet leads, and which bullets you choose says everything about what you think this employer cares about.
+
+**Applying for a management role — lead with:**
+```text
+• Led and mentored a team of 8 analysts across 3 time zones,
+  increasing team throughput by 30% over two quarters
+• Managed $2.4M departmental budget, delivering projects 12%
+  under forecast across the fiscal year
+```
+
+**Applying for an individual contributor technical role — lead with:**
+```text
+• Designed and deployed automated ETL pipeline reducing manual
+  reporting time from 8 hours/week to 45 minutes
+• Built Python-based anomaly detection model that flagged $1.2M
+  in billing discrepancies over 6 months
+```
+
+Both bullets are from the same resume, the same job. Tailoring is choosing the right story for the right audience.
+
+## Keyword Integration Rules
+
+Integrating keywords effectively means placing them where they belong in context — not stuffing them in randomly.
+
+**Do:**
+- Add keywords that truthfully describe your work, even if you didn't previously use that exact phrasing
+- Use the job description's exact terminology when it accurately describes your experience
+- Place high-priority keywords in multiple locations: summary, skills section, and one or more experience bullets
+- Treat keyword frequency in the JD as a relevance signal — terms that appear 4+ times deserve prominent placement
+
+**Don't:**
+- Add skills you don't genuinely have to your skills section
+- Repeat the same keyword phrase five times in the same job entry
+- Create a misleading context (e.g., mentioning "managed $10M budget" when you tracked expense reports)
+- Sacrifice resume readability to achieve keyword density — ATS passes a resume to a human who still has to want to call you
+
+<Note>
+  Keep your master resume separate and unchanged. Use the [`resume-version-manager`](/skills/resume-version-manager) skill to save, name, and track each tailored version — including which company it was sent to and on what date. This protects your master resume as the source of truth and makes it easy to recall which version you sent when an interview comes up two weeks later.
+</Note>
+
+<Warning>
+  The skill will ask for clarification rather than invent experience. If the job description requires a specific skill, certification, or experience type that is genuinely absent from your background, the skill will flag the gap clearly and suggest how to address it honestly — in your cover letter, by framing adjacent skills, or by recommending you build that credential before applying. A fabricated resume that gets you an interview is a problem: you'll be questioned on claims you can't support.
+</Warning>
+
+## Common Tailoring Scenarios
+
+<Tabs>
+  <Tab title="Tech Role at Non-Tech Company">
+    **The challenge:** They want technical depth but also need someone who understands the business context — not just someone who can build things.
+
+    **The strategy:** Lead every technical bullet with the business outcome first, then the method. "Reduced customer churn by 18% by rebuilding the recommendation engine" is better than "Rebuilt recommendation engine using collaborative filtering." Add a line to your summary about translating technical work into business impact. Include any cross-functional collaboration with non-technical stakeholders prominently — this is exactly what a non-tech company worries about when hiring technical people.
+  </Tab>
+  <Tab title="Management Role (IC Background)">
+    **The challenge:** You've been an individual contributor and want to move into management, or you've done both and need to position the management experience more prominently.
+
+    **The strategy:** Surface any team coordination, mentorship, or leadership bullets from every role — even informal leadership counts. Reorder experience so management exposure leads. Update your summary to claim the management title directly if you've held it, or to signal readiness ("...with 3 years of team lead and cross-functional project ownership"). Keep some technical bullets to show you understand the work your team will do.
+  </Tab>
+  <Tab title="Startup (Coming from Big Company)">
+    **The challenge:** Startups worry that big-company candidates are too process-heavy, too slow, and not comfortable with ambiguity.
+
+    **The strategy:** Surface any cross-functional ownership, projects you drove from zero, scrappy problem-solving, or examples of working with limited resources. De-emphasize bullets that sound like committee work or large-team coordination. Highlight examples where you took initiative without being asked. If you've worked on a side project or consulted independently, include it.
+  </Tab>
+  <Tab title="Big Company (Coming from Startup)">
+    **The challenge:** Large companies worry startup candidates can't operate within structure, collaborate at scale, or document and communicate rigorously.
+
+    **The strategy:** Emphasize any process improvements you introduced, how your work scaled, and cross-team collaboration (even informal). Use structured language: "defined scope," "established process," "documented requirements," "aligned stakeholders." Show the size of impact where possible — numbers that demonstrate scale signal you're ready to operate at enterprise level.
+  </Tab>
+</Tabs>
+
+## Pre-Submission Tailoring Checklist
+
+Before submitting any tailored version, verify every item on this list:
+
+- **Summary** mentions the exact job title or function you're applying for
+- **Top five skills** align with the top five requirements from the job description
+- **Most relevant experience** is positioned first within each role
+- **Each role's lead bullet** addresses the job's primary requirement
+- **All required keywords** from the JD appear naturally in the resume
+- **Company and industry terminology** is used correctly and consistently
+- **All claims are 100% truthful** — no inflated metrics, no invented experience
+- **File is named appropriately** for this company and role
+- **ATS formatting is intact** — no tables, no columns, standard section headers
+- **Version is saved** with a clear filename for your records
+
+## Pairing With Other Skills
+
+Resume tailoring works best as part of a complete application workflow:
+
+- Run [`job-description-analyzer`](/skills/job-description-analyzer) **first** to calculate your match score and identify what to emphasize before investing time in tailoring
+- Use [`resume-ats-optimizer`](/skills/resume-ats-optimizer) **after tailoring** to confirm that keyword additions and structural changes remain ATS-compatible
+- Use [`cover-letter-generator`](/skills/cover-letter-generator) to turn the gaps identified during tailoring into honest, strategic cover letter talking points
+- Use [`resume-version-manager`](/skills/resume-version-manager) to save and track this tailored version and connect it to the application record
