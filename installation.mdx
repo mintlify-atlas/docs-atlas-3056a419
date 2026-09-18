@@ -1,7 +1,7 @@
 ---
-title: "Install ResumeSkills for Your AI Assistant"
+title: "How to Install ResumeSkills: CLI, Manual, or Direct Download"
 sidebarTitle: "Installation"
-description: "Three ways to install ResumeSkills: CLI via npx, manual git clone, or direct download of individual skill files. Supports global and per-project installs."
+description: "Three ways to install ResumeSkills: one-command npx CLI, manual git clone, or per-skill direct download. Covers global and per-project setups."
 ---
 
 ResumeSkills supports three installation methods so you can choose the approach that best fits your setup. The **CLI install** is the fastest path — one command installs all 20 skills globally via `npx`. The **manual install** is ideal if you prefer to manage files directly or work in an environment without npm access. The **direct download** option lets you pick individual skill files if you only need a subset of the collection. All three methods produce the same result: skill files in your AI agent's skills directory, ready to use immediately.
@@ -54,19 +54,6 @@ ResumeSkills supports three installation methods so you can choose the approach 
     cp -r ResumeSkills/skills/* ~/.cursor/skills/
     ```
 
-    **For Claude Code:**
-
-    ```bash
-    # Clone the repository
-    git clone https://github.com/Paramchoudhary/ResumeSkills.git
-
-    # Create the Claude Code skills directory if it doesn't exist
-    mkdir -p ~/.claude/skills
-
-    # Copy all skill files
-    cp -r ResumeSkills/skills/* ~/.claude/skills/
-    ```
-
     **For other agents:**
 
     ```bash
@@ -90,11 +77,11 @@ ResumeSkills supports three installation methods so you can choose the approach 
     4. Move the downloaded file into your AI agent's skills directory:
 
     ```bash
-    # Example: manually place a single skill for Claude Code
-    mv ~/Downloads/resume-ats-optimizer.md ~/.claude/skills/
-
     # Example: manually place a single skill for Cursor
     mv ~/Downloads/resume-ats-optimizer.md ~/.cursor/skills/
+
+    # Example: manually place a single skill for other agents
+    mv ~/Downloads/resume-ats-optimizer.md ~/.agents/skills/
     ```
 
     Repeat for each skill file you want. This approach is useful when you want a minimal set of skills or when you're evaluating specific skills before installing the full collection.
@@ -150,9 +137,7 @@ Skills are stored in a different directory depending on which AI assistant you'r
 
 | AI Agent | Global Skills Path |
 |----------|--------------------|
-| Claude Code | `~/.claude/skills/` |
 | Cursor | `~/.cursor/skills/` |
-| Windsurf | See Windsurf agent documentation |
-| Codex, Amp, Antigravity, Augment, others | `~/.agents/skills/` |
+| Windsurf, Codex, Amp, Antigravity, Augment, others | `~/.agents/skills/` |
 
 If your agent isn't listed above, check its documentation for the configured skills or context directory — drop the skill files there and they'll be picked up automatically.
